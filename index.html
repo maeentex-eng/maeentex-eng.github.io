@@ -147,7 +147,7 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <a href="https://scholar.google.com/citations?user=WhM4Pz0AAAAJ&amp;hl=en">Google Scholar</a>
       <a href="https://www.linkedin.com/in/maeen-md-khairul-akter-a00b4750/">LinkedIn</a>
       <a href="https://wastedata.info/about-us/">Waste Data &amp; Analysis Center</a>
-      <a href="#" id="lnk-cv" download="Maeen_Md_Khairul_Akter_CV.pdf">CV (PDF)</a>
+      <a href="Maeen_Md_Khairul_Akter_CV.pdf" download>CV (PDF)</a>
     </div>
   </aside>
 
@@ -173,7 +173,7 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
         <p>Those are the questions the textile and apparel industry needs answered next: where its waste actually goes, which recovery routes are worth investing in, and how to design policy that works for a supply chain with a large informal sector. I want to bring the measurement discipline of waste systems research back to the industry I came from, and to teach the next generation of engineers and managers to think that way from the start.</p>
       </div>
       <div>
-        <img class="portrait-img" id="portrait" alt="Maeen Md Khairul Akter">
+        <img class="portrait-img" src="photo.jpg" alt="Maeen Md Khairul Akter">
         <dl class="facts">
           <dt>Based in</dt><dd>Johnson City, New York</dd>
           <dt>Affiliation</dt><dd>Department of Technology, AI and Society, Stony Brook University</dd>
@@ -454,10 +454,8 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
   </main>
 </div>
 
-<script src="assets.js"></script>
 <script>
 (function(){
-  if(window.SITE_ASSETS){document.getElementById("portrait").src=SITE_ASSETS.photo;document.getElementById("lnk-cv").href=SITE_ASSETS.cv;}
   var links=document.querySelectorAll('nav.tabs a[data-tab]');
   var tabs=document.querySelectorAll('section.tab');
   function show(id){
