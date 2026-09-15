@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Maeen Md Khairul Akter — PhD candidate in Technology, Policy and Innovation at Stony Brook University; solid waste characterization, circular economy, textile waste.">
+<title>Maeen Md Khairul Akter</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F9; --surface:#FFFFFF; --ink:#1A2236; --ink-2:#4A5568; --muted:#7A8497;
+  --line:#DCE1E9; --line-soft:#E9EDF2;
+  --indigo:#2F4B8C; --indigo-soft:#E4EAF6; --moss:#5F7A3A; --moss-soft:#EAF0E1;
+  --ph:#B24A2E; --ph-bg:#FBF1EC; --ph-line:#E2B3A4;
+  --shadow:0 1px 2px rgba(26,34,54,.06),0 8px 24px -12px rgba(26,34,54,.12);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161F; --surface:#1A2030; --ink:#EEF1F6; --ink-2:#C3CAD6; --muted:#8B94A6;
+  --line:#2C3547; --line-soft:#222B3B;
+  --indigo:#8FA7E4; --indigo-soft:#232D48; --moss:#A6C075; --moss-soft:#243020;
+  --ph:#E89A80; --ph-bg:#2B1F1B; --ph-line:#6E4034;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5);
+}}
+:root[data-theme="dark"]{
+  --bg:#12161F; --surface:#1A2030; --ink:#EEF1F6; --ink-2:#C3CAD6; --muted:#8B94A6;
+  --line:#2C3547; --line-soft:#222B3B;
+  --indigo:#8FA7E4; --indigo-soft:#232D48; --moss:#A6C075; --moss-soft:#243020;
+  --ph:#E89A80; --ph-bg:#2B1F1B; --ph-line:#6E4034;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+h1,h2,h3,h4{font-family:"Newsreader",Georgia,"Times New Roman",serif;font-weight:500;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:.35rem}
+h3{font-size:1.35rem;margin-top:2.4rem;margin-bottom:.6rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+h4{font-family:"Public Sans",sans-serif;font-size:.95rem;font-weight:600;margin:1.4rem 0 .4rem}
+p{margin:0 0 1rem;max-width:68ch}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;letter-spacing:.02em}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 .6rem}
+.lede{font-family:"Newsreader",Georgia,serif;font-size:1.25rem;line-height:1.5;color:var(--ink-2);max-width:60ch}
+
+/* shell */
+.shell{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}
+.side{position:sticky;top:env(safe-area-inset-top,0px);height:100vh;padding:2.4rem 1.6rem 2rem 2rem;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2rem;background:var(--bg)}
+.brand{display:flex;flex-direction:column;gap:.35rem}
+.brand .name{font-family:"Newsreader",Georgia,serif;font-size:1.35rem;font-weight:600;line-height:1.2;color:var(--ink)}
+.brand .role{font-size:.82rem;color:var(--muted);line-height:1.4}
+nav.tabs{display:flex;flex-direction:column;gap:.15rem}
+nav.tabs a{display:flex;align-items:baseline;gap:.6rem;padding:.5rem .7rem;border-radius:6px;color:var(--ink-2);text-decoration:none;font-size:.93rem;font-weight:500;border-left:3px solid transparent}
+nav.tabs a .n{font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:var(--muted);min-width:1.1rem}
+nav.tabs a:hover{background:var(--surface);color:var(--ink)}
+nav.tabs a[aria-current="page"]{background:var(--indigo-soft);color:var(--indigo);border-left-color:var(--indigo)}
+nav.tabs a:focus-visible,.btn:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+.side .links{margin-top:auto;display:flex;flex-direction:column;gap:.3rem;font-size:.85rem}
+.main{padding:3rem clamp(1.2rem,5vw,4.5rem) 5rem;max-width:1080px}
+section.tab{display:none}
+section.tab.active{display:block}
+header.tab-head{margin-bottom:2rem;padding-bottom:1.4rem;border-bottom:2px solid var(--ink)}
+
+/* components */
+.placeholder{border:1.5px dashed var(--ph-line);background:var(--ph-bg);color:var(--ph);border-radius:6px;padding:.75rem 1rem;font-size:.88rem;line-height:1.45;margin:0 0 1rem;max-width:68ch}
+.placeholder::before{content:"To add";font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:.25rem;opacity:.85}
+.photo{border:1.5px dashed var(--ph-line);background:var(--ph-bg);color:var(--ph);border-radius:8px;display:grid;place-items:center;text-align:center;padding:1rem;font-size:.82rem;line-height:1.4;max-width:100%}
+.photo::before{content:"Photo";font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:.35rem}
+.photo.portrait{aspect-ratio:4/5;width:100%;max-width:280px}
+.photo.wide{aspect-ratio:16/7;width:100%}
+.photo.sq{aspect-ratio:1;width:100%}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:start}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;align-items:start}
+.about-top{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:2.5rem;align-items:start}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1.2rem;font-size:.9rem;margin:1.2rem 0 0;padding:1rem 0 0;border-top:1px solid var(--line)}
+.facts dt{color:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding-top:.2rem}
+.facts dd{margin:0;color:var(--ink)}
+.table-wrap{overflow-x:auto;margin:0 0 1rem}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:.5rem .7rem .5rem 0;border-bottom:1px solid var(--ink)}
+td{padding:.55rem .7rem .55rem 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+td.code{font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--ink-2);white-space:nowrap}
+tbody tr:hover td{background:var(--surface)}
+.tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.06em;padding:.12rem .45rem;border-radius:4px;background:var(--indigo-soft);color:var(--indigo);white-space:nowrap}
+.tag.moss{background:var(--moss-soft);color:var(--moss)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.2rem 1.3rem;box-shadow:var(--shadow)}
+.card h4{margin-top:0}
+.card p:last-child{margin-bottom:0}
+.feature{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:1.6rem;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.4rem 1.5rem;box-shadow:var(--shadow);margin:1rem 0 1.5rem}
+.stats{display:flex;flex-wrap:wrap;gap:1.6rem;margin:1rem 0 1.5rem}
+.stat{display:flex;flex-direction:column}
+.stat b{font-family:"Newsreader",Georgia,serif;font-size:1.9rem;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:.78rem;color:var(--muted);margin-top:.3rem}
+ul.plain{list-style:none;padding:0;margin:0 0 1rem}
+ul.plain li{padding:.45rem 0;border-bottom:1px solid var(--line-soft);max-width:72ch}
+ul.plain li:last-child{border-bottom:0}
+ul.plain li b{font-weight:600}
+ul.bul{padding-left:1.2rem;margin:0 0 1rem;max-width:68ch}
+ul.bul li{margin-bottom:.4rem}
+.pub{display:grid;grid-template-columns:3.6rem minmax(0,1fr);gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line-soft)}
+.pub .yr{font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--muted);padding-top:.15rem;font-variant-numeric:tabular-nums}
+.pub .t{font-weight:600;line-height:1.4}
+.pub .m{color:var(--ink-2);font-size:.92rem;margin-top:.15rem}
+.pub .m i{font-style:italic}
+.pub .note{font-size:.8rem;color:var(--muted);margin-top:.3rem}
+.timeline{list-style:none;padding:0;margin:0 0 1rem;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:.2rem 0 1.1rem 1.4rem}
+.timeline li::before{content:"";position:absolute;left:-7px;top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--indigo)}
+.timeline .when{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--muted);display:block}
+.timeline .what{font-weight:600}
+.timeline .where{color:var(--ink-2);font-size:.92rem}
+.note-strip{font-size:.85rem;color:var(--ink-2);background:var(--surface);border-left:3px solid var(--moss);padding:.7rem 1rem;margin:0 0 1.5rem;max-width:68ch}
+footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.topbar{display:none}
+
+@media (max-width:860px){
+  .shell{grid-template-columns:1fr}
+  .side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:1.4rem 1.2rem 1rem;gap:1rem}
+  nav.tabs{flex-direction:row;flex-wrap:wrap;gap:.3rem}
+  nav.tabs a{padding:.4rem .6rem;border-left:0;border-bottom:2px solid transparent;border-radius:4px 4px 0 0}
+  nav.tabs a[aria-current="page"]{border-left:0;border-bottom-color:var(--indigo)}
+  .side .links{margin-top:0;flex-direction:row;flex-wrap:wrap;gap:1rem}
+  .main{padding:1.8rem 1.2rem 4rem}
+  .about-top,.grid-2,.grid-3,.feature{grid-template-columns:1fr}
+  .photo.portrait{max-width:220px}
+}
+@media (prefers-reduced-motion:no-preference){nav.tabs a{transition:background .15s,color .15s}}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <aside class="side">
+    <div class="brand">
+      <span class="name">Maeen Md Khairul Akter</span>
+      <span class="role">PhD Candidate, Technology, Policy &amp; Innovation<br>Stony Brook University</span>
+    </div>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#about" data-tab="about"><span class="n">1</span>About me</a>
+      <a href="#teaching" data-tab="teaching"><span class="n">2</span>Teaching &amp; mentorship</a>
+      <a href="#research" data-tab="research"><span class="n">3</span>Research &amp; publications</a>
+      <a href="#other" data-tab="other"><span class="n">4</span>Other work of significance</a>
+      <a href="#social" data-tab="social"><span class="n">5</span>Social work</a>
+    </nav>
+    <div class="links">
+      <a href="mailto:maeen.mdkhairulakter@stonybrook.edu">Email</a>
+      <a href="#" id="lnk-scholar">Google Scholar <span class="mono" style="color:var(--ph)">[add URL]</span></a>
+      <a href="#" id="lnk-linkedin">LinkedIn <span class="mono" style="color:var(--ph)">[add URL]</span></a>
+      <a href="https://wastedata.info/about-us/">Waste Data &amp; Analysis Center</a>
+      <a href="#" id="lnk-cv">CV (PDF) <span class="mono" style="color:var(--ph)">[add link]</span></a>
+    </div>
+  </aside>
+
+  <main class="main">
+
+  <!-- ===================== 1. ABOUT ===================== -->
+  <section class="tab" id="tab-about" aria-labelledby="h-about">
+    <header class="tab-head">
+      <p class="eyebrow">About me</p>
+      <h1 id="h-about">Measuring waste so that policy can manage it.</h1>
+    </header>
+    <div class="about-top">
+      <div>
+        <p class="lede">I am a textile engineer turned waste-systems researcher. I spent nine years teaching and building an engineering-management department in Dhaka; now I spend my days sorting, weighing and modelling municipal solid waste across New York State so that the people who write waste policy have numbers they can trust.</p>
+        <h4>Who I am</h4>
+        <p>I am a PhD candidate in Technology, Policy and Innovation at Stony Brook University's Department of Technology and Society, and a researcher at the <a href="https://wastedata.info">Waste Data and Analysis Center (WDAC)</a>. Before coming to the United States in 2022, I was an Assistant Professor of Textile Engineering Management at the Bangladesh University of Textiles (BUTEX), and before that a lecturer at the National Institute of Textile Engineering and Research (NITER). I started on a weaving floor as a production engineer at Envoy Textiles, which is where I first noticed how much material a factory throws away and how little anyone measured it.</p>
+        <h4>What I do</h4>
+        <p>My dissertation develops a multivariate, compositional-data framework for measuring and comparing municipal solid waste systems, so that jurisdictions can be compared as whole systems rather than one material at a time. The empirical base is the NYSDEC-funded statewide waste characterization program, where I design and run physical waste sorts and lead the technical reporting. In parallel I keep a research line on textile waste and the circular economy in Bangladesh: material flow analysis of pre-consumer waste, informal recycling networks, and consumer attitudes toward sustainable apparel.</p>
+        <h4>What I like</h4>
+        <div class="placeholder">A short, personal paragraph: what you enjoy outside work, what you read, what you cook, what you do with your family in Johnson City. Two to four sentences, in your own voice.</div>
+        <h4>Where I am going</h4>
+        <p>My long-term goal is a career in sustainable textile waste management and circular economy in the United States, working at the junction of measurement, industry practice and public policy. I want the tools I build for municipal waste to be equally usable for the textile and apparel waste streams that I know from the inside.</p>
+        <div class="placeholder">Optional: one or two sentences on the specific role you are aiming at after the PhD (faculty, government research, industry R&amp;D) and what you would want a department like Auburn's to know about you.</div>
+      </div>
+      <div>
+        <div class="photo portrait">A professional portrait, ideally not a passport-style crop. Natural light, plain background.</div>
+        <dl class="facts">
+          <dt>Based in</dt><dd>Johnson City, New York</dd>
+          <dt>Affiliation</dt><dd>Dept. of Technology and Society, Stony Brook University</dd>
+          <dt>Center</dt><dd>Waste Data and Analysis Center (WDAC)</dd>
+          <dt>Expected</dt><dd>PhD, May 2027</dd>
+          <dt>Fields</dt><dd>Solid waste characterization, compositional data analysis, circular economy, textile waste, SDG 12</dd>
+          <dt>Editor</dt><dd>Managing Editor, <i>Textile Focus</i> and <i>Denim Focus</i></dd>
+        </dl>
+      </div>
+    </div>
+
+    <h3>Education</h3>
+    <ul class="timeline">
+      <li><span class="when">2022 – 2027 (expected)</span><span class="what">Ph.D., Technology, Policy and Innovation</span><br><span class="where">Department of Technology and Society, Stony Brook University, New York</span><br><span class="where">Dissertation: <i>Measuring and Comparing Municipal Solid Waste Systems in the United States: Multivariate Evidence for Policy Design and Evaluation</i></span></li>
+      <li><span class="when">2019</span><span class="what">M.S., Management of Technology</span><br><span class="where">Bangladesh University of Engineering and Technology (BUET), Dhaka</span></li>
+      <li><span class="when">2013</span><span class="what">B.Sc., Textile Engineering (Management)</span><br><span class="where">Bangladesh University of Textiles (BUTEX), Dhaka</span></li>
+    </ul>
+    <div class="placeholder">Confirm the B.Sc. year. Your CV lists 2019 for both degrees; your BUTEX application CV says the B.Sc. was the 2011 session, held 2013. I have used 2013 here.</div>
+
+    <h3>Appointments</h3>
+    <ul class="timeline">
+      <li><span class="when">Aug 2022 – present</span><span class="what">PhD Researcher, Solid Waste Characterization &amp; Policy</span><br><span class="where">Waste Data and Analysis Center, Stony Brook University</span></li>
+      <li><span class="when">2018 – 2022</span><span class="what">Lecturer, then Assistant Professor, Textile Engineering Management</span><br><span class="where">Bangladesh University of Textiles (BUTEX), Dhaka</span></li>
+      <li><span class="when">2016 – present</span><span class="what">Managing Editor</span><br><span class="where"><i>Textile Focus</i> (and later <i>Denim Focus</i>), Dhaka</span></li>
+      <li><span class="when">2014 – 2018</span><span class="what">Lecturer, Textile Engineering Management</span><br><span class="where">National Institute of Textile Engineering and Research (NITER), Savar</span></li>
+      <li><span class="when">2013 – 2014</span><span class="what">Production Officer, Weaving</span><br><span class="where">Envoy Textiles Limited</span></li>
+      <li><span class="when">2011 – 2015</span><span class="what">Technical team member (part-time)</span><br><span class="where"><i>Bangladesh Textile Today</i></span></li>
+    </ul>
+    <div class="placeholder">Confirm the BUTEX dates. Your current CV says 2013–2022 as Assistant Professor; the BUTEX application file says you joined as Lecturer in April 2018 after NITER. I have shown the sequence NITER 2014–18, BUTEX 2018–22. Tell me the promotion year to Assistant Professor.</div>
+  </section>
+
+  <!-- ===================== 2. TEACHING ===================== -->
+  <section class="tab" id="tab-teaching" aria-labelledby="h-teaching">
+    <header class="tab-head">
+      <p class="eyebrow">Teaching &amp; mentorship</p>
+      <h1 id="h-teaching">Nine years in the classroom, and a department built alongside it.</h1>
+    </header>
+    <p class="lede">Between 2014 and 2022 I taught management, economics, law and product-development courses to textile engineering undergraduates and MBA students in Bangladesh, and took on the unglamorous work that makes a young department function: outcome-based curricula, accreditation self-assessment, a lab, and a student innovation fair.</p>
+    <div class="stats">
+      <div class="stat"><b>8+</b><span>years of classroom teaching</span></div>
+      <div class="stat"><b>15+</b><span>distinct courses taught</span></div>
+      <div class="stat"><b>3</b><span>undergraduate batches supervised (41st–43rd)</span></div>
+      <div class="stat"><b>25</b><span>student projects at the 2019 Idea &amp; Innovation Fair</span></div>
+    </div>
+    <div class="placeholder">Check the four numbers above against your records, and add total students taught if you have it.</div>
+
+    <h3>Teaching philosophy</h3>
+    <div class="placeholder">Three to five sentences on how you teach. Your ITE Singapore pedagogy training (Gagné's nine events, Bloom's taxonomy, SMART/ABCD objectives, assessment for learning) is a natural anchor, as is your habit of bringing factory problems into class. I can draft this once you tell me what matters most to you.</div>
+
+    <h3>Courses taught</h3>
+    <p>Undergraduate courses in the B.Sc. in Textile Engineering (Management) program unless noted. Course codes follow the BUTEX and NITER syllabi of the time.</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Course</th><th>Level</th><th>Institution</th><th>Years</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td>Business &amp; Industrial Law / Business Ethics &amp; Legal Environment</td><td class="code">L4</td><td>BUTEX</td><td class="code">2019–21</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Export–Import, Trade Agreements &amp; Business (EITAB)</td><td class="code">L4</td><td>BUTEX</td><td class="code">2019–21</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Entrepreneurship &amp; Product Development (EPD)</td><td class="code">L4</td><td>BUTEX</td><td class="code">2019–21</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Financial Management</td><td class="code">L3–4</td><td>BUTEX</td><td class="code">2018–21</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Managerial Economics</td><td class="code">L3</td><td>BUTEX</td><td class="code">2020–22</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Industrial Management</td><td class="code">L3</td><td>BUTEX, NITER</td><td class="code">2015–21</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Environment &amp; Pollution Control</td><td class="code">—</td><td>BUTEX</td><td class="code">—</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>International Marketing of Textile &amp; Apparel / Fundamentals of Marketing</td><td class="code">L2–4</td><td>BUTEX, NITER</td><td class="code">2015–21</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Market Research &amp; Product Development (Part B)</td><td class="code">L4</td><td>BUTEX</td><td class="code">2019–21</td><td><span class="tag moss">co-taught</span></td></tr>
+        <tr><td>Textile Product / Project Development Lab</td><td class="code">L4 lab</td><td>BUTEX</td><td class="code">2019–21</td><td><span class="tag">lab lead</span></td></tr>
+        <tr><td>Quality Management</td><td class="code">L4</td><td>BUTEX, NITER</td><td class="code">2016–21</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Supply Chain Management</td><td class="code">L4</td><td>BUTEX, NITER</td><td class="code">2016–21</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Textile &amp; Apparel Merchandising (TEM-409)</td><td class="code">L4</td><td>BUTEX, NITER</td><td class="code">2016–21</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Cost &amp; Management Accounting (TE-407)</td><td class="code">L4</td><td>NITER</td><td class="code">2015–18</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Introduction to Management of Textile &amp; Apparel (TE-408)</td><td class="code">L4</td><td>NITER</td><td class="code">2015–18</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Garments CAD (Lectra)</td><td class="code">short course</td><td>NITER / SEIP</td><td class="code">2016–18</td><td><span class="tag">trainer</span></td></tr>
+        <tr><td>Technology Management</td><td class="code">MBA</td><td>BUTEX</td><td class="code">2019</td><td><span class="tag">course lead</span></td></tr>
+        <tr><td>Advanced Textile Studies</td><td class="code">—</td><td>BUTEX</td><td class="code">—</td><td><span class="tag">lectures</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="placeholder">This table is reconstructed from your course folders and CV, so the years, levels and lead/co-taught roles are my best guess. Please correct it row by row; delete anything you only assisted with.</div>
+
+    <h3>Curriculum development and quality assurance</h3>
+    <p>Much of my departmental service at BUTEX ran through the Institutional Quality Assurance Cell (IQAC), where the Department of Textile Engineering Management (DoTEM) went through self-assessment, improvement planning and the move to outcome-based education.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Outcome-based curriculum (OBE)</h4>
+        <p>Drafted the department's vision, mission and program educational outcomes; mapped course outcomes to program learning outcomes across the B.Sc. curriculum; wrote OBE course profiles and lesson plans with teaching-learning and assessment strategies for each contact hour.</p>
+        <p>New course contents authored for the revised curriculum include <i>Sustainability and Compliance Management</i> (TEM-4203), <i>Business Analytics Lab</i> (TEM-4201), <i>Digital Presentation Techniques</i>, <i>Textile Technology Management</i>, <i>E-commerce and International Trade</i>, and <i>Textile Quality Management</i>.</p>
+      </div>
+      <div class="card">
+        <h4>Self-assessment and improvement plan</h4>
+        <p>Contributed to the DoTEM Self-Assessment Report, the External Peer Review exit report response, and the Post Self-Assessment Improvement Plan (PSAIP), including the financial summary, annual action plan and quarterly progress reports through the implementation year.</p>
+        <p>Prepared course-outcome documentation and faculty profiles for BAETE engineering accreditation.</p>
+      </div>
+      <div class="card">
+        <h4>Academic loss recovery, 2021</h4>
+        <p>Member-Secretary of the university's Academic Loss Recovery committee after the pandemic closure: collected lab-class requirements from every department, drafted the recovery plan and a proposed 2021–22 academic calendar in line with UGC guidelines.</p>
+      </div>
+      <div class="card">
+        <h4>NITER curriculum and assessment</h4>
+        <p>At NITER, worked on the B.Sc. in Textile Engineering syllabus alignment with BUTEX and on new assessment guidelines.</p>
+        <div class="placeholder">Add your specific role at NITER (committee, coordinator?) and anything on the SEIP operational policy you helped draft.</div>
+      </div>
+    </div>
+    <div class="placeholder" style="margin-top:1rem">Names and years of the IQAC committee roles you held (member, coordinator, focal person), and the year DoTEM's OBE curriculum was approved.</div>
+
+    <h3>Idea &amp; Innovation Fair 2019</h3>
+    <div class="feature">
+      <div>
+        <p class="eyebrow">6 May 2019 · BUTEX Auditorium · with BEST Corporation</p>
+        <p>I organised the department's first day-long Idea and Innovation Fair to give undergraduates a stage to present their own ideas, screen the strongest for industry funding, and normalise the habit of innovating before graduation. Around twenty-five student teams from across BUTEX departments presented prototypes, posters and layouts.</p>
+        <p>Projects included a compostable bag made from sweet-potato starch, smart apparel for visually impaired users, a sensor-driven dustbin, a semi-automated azo-dye reaction vessel, an app-based caretaker service for the elderly, intelligent protective clothing for firefighters, and an online open market for farmers.</p>
+        <div class="placeholder">Your exact role (convener, organising secretary?), who judged, what the winners received, and whether any project went on to funding or a startup.</div>
+      </div>
+      <div class="photo wide">Fair-day photo: students at a prototype table or the poster wall. A second photo of the winners with certificates would work well.</div>
+    </div>
+
+    <h3>Lab development</h3>
+    <div class="grid-2">
+      <div>
+        <p>I led the specification and tender for the first dedicated Textile Engineering Management lab at BUTEX: a 15-workstation computer lab for business analytics and CAD, a small sewing and product-development line (lockstitch, chain-stitch, overlock and flatlock machines), a 3D printer, and a reference library on industrial engineering, ERP and information systems for apparel. The Project Development Lab course and the Business Analytics Lab were designed to run in this space, with Tableau and spreadsheet analytics as the core tools.</p>
+        <div class="placeholder">Year the lab opened, its official name, budget approval, and whether you also prepared the HEQEP Technology Transfer Office proposal (your CV lists you as Deputy Sub-Project Manager for it).</div>
+      </div>
+      <div class="photo sq">The TEM lab: computer stations or the sewing line, ideally with students working.</div>
+    </div>
+
+    <h3>Mentorship and supervision</h3>
+    <ul class="plain">
+      <li><b>Undergraduate capstone and industrial attachment projects</b> — supervised project groups from the 41st, 42nd and 43rd batches of Textile Engineering Management on topics in textile sustainability and operations: material stream mapping of apparel factories, fabric wastage quantification, jute-poly bag development, and industrial attachment reports at Echotex and Remi Holdings. The wastage and material-stream work fed directly into my later published research.</li>
+      <li><b>MBA and M.Sc. theses</b> — supervised MBA (6th batch) projects at BUTEX on sewing-section efficiency and OEE improvement and literature-review projects, and M.Sc. thesis work at NITER/IAT.</li>
+      <li><b>Internship and project coordination</b> — coordinated internship and project-group allocation and the supervisor list for the 43rd batch, and served on examiner panels.</li>
+    </ul>
+    <div class="placeholder">Number of students supervised, and one or two named mentees (with permission) who went on to notable positions or graduate study. Student names from your files are deliberately left out.</div>
+
+    <h3>Pedagogy and training</h3>
+    <ul class="plain">
+      <li><b>Pedagogy &amp; Assessment for TVET</b> — trained at the Institute of Technical Education (ITE), Singapore, under the Skills for Employment Investment Program (SEIP).</li>
+      <li><b>Certified trainer and assessor</b> — SEIP, Ministry of Finance, Government of Bangladesh, implemented by BTMA; served as external assessor for SEIP training batches.</li>
+      <li><b>Pedagogy workshops</b> — designed and delivered a "Pedagogy/Teaching Methodology for TVET Professionals" workshop covering lesson planning, Gagné's nine events, Bloom's taxonomy, questioning and feedback, and assessment for learning; ran career-planning workshops for textile students.</li>
+      <li><b>Faculty training</b> — participated in GIZ faculty training on Sustainable Chemicals and Environmental Management in the textile sector.</li>
+      <li><b>Teaching in the US</b> — taught computational skills to high-school students, including Pareto analysis in Excel.</li>
+    </ul>
+    <div class="placeholder">Any teaching assistantship or guest lectures at Stony Brook, and the year of the ITE Singapore training.</div>
+  </section>
+
+  <!-- ===================== 3. RESEARCH ===================== -->
+  <section class="tab" id="tab-research" aria-labelledby="h-research">
+    <header class="tab-head">
+      <p class="eyebrow">Research &amp; publications</p>
+      <h1 id="h-research">Waste as a compositional system.</h1>
+    </header>
+    <p class="lede">Two research lines, one question: how do you measure material waste well enough that policy can act on it? One line is municipal solid waste in New York State; the other is textile waste in Bangladesh's apparel supply chain.</p>
+
+    <h3>Dissertation</h3>
+    <div class="feature">
+      <div>
+        <p><b>Measuring and Comparing Municipal Solid Waste Systems in the United States: Multivariate Evidence for Policy Design and Evaluation</b></p>
+        <p>Waste characterization data are compositions: percentages that sum to one hundred and cannot be compared one material at a time without distortion. The dissertation builds a compositional-data framework (isometric log-ratio transformation, Aitchison distance, hierarchical clustering) that treats a jurisdiction's waste stream as a single object, so that counties, seasons and program designs can be compared as whole systems. It is validated on New York State sort data collected 2019–2025.</p>
+        <div class="placeholder">Committee members, and one sentence on the policy result you most want a reader to remember.</div>
+      </div>
+      <div class="photo sq">A figure from the dissertation: a dendrogram or heatmap of jurisdictions, or a photo from a waste sort.</div>
+    </div>
+
+    <h3>Current research: NYS solid waste characterization</h3>
+    <p>At the <a href="https://wastedata.info">Waste Data and Analysis Center</a> I design and run large-scale MSW characterization studies across New York State under the NYSDEC-funded statewide program (2019–2029), from physical waste sorting and field data collection through compositional analysis and technical reporting. The program has sampled more than twenty sites and hand-sorted more than 150 tons of waste. I lead the technical reports for individual jurisdictions and the Task 4 report on recycling's role in a circular economy.</p>
+
+    <h3>Peer-reviewed publications</h3>
+    <div class="pub"><div class="yr">2026</div><div><div class="t">Municipal solid waste composition in a multivariate context: A case study using New York State 2023 sort data</div><div class="m">Akter, M. M. K., Tonjes, D. J., Firmansyah, F., Wang, Y., Thyberg, K. L., &amp; Hewitt, E. — <i>under review</i></div><div class="note">First author</div></div></div>
+    <div class="pub"><div class="yr">2025</div><div><div class="t">Material circularity of pre-consumer textile solid waste: Learning from Bangladesh</div><div class="m">Akter, M. M. K., Haq, U. N., Azad, A. K., et al. — <i>PLOS Sustainability &amp; Transformation</i>, 4(4): e0000168. <a href="https://doi.org/10.1371/journal.pstr.0000168">doi:10.1371/journal.pstr.0000168</a></div><div class="note">First author</div></div></div>
+    <div class="pub"><div class="yr">2025</div><div><div class="t">Textile solid waste end-market in the circular economy: The Mirpur cluster in Bangladesh</div><div class="m">Azad, A. K., Haq, U. N., Akter, M. M. K., &amp; Uddin, M. A. — <i>Journal of Advanced Manufacturing and Processing</i></div></div></div>
+    <div class="pub"><div class="yr">2023</div><div><div class="t">Sustainable apparel: a perspective from Bangladesh's young consumers</div><div class="m">Su, J., Iqbal, M. A., Haque, F., &amp; Akter, M. M. K. — <i>Social Responsibility Journal</i>. <a href="https://doi.org/10.1108/SRJ-01-2022-0035">doi:10.1108/SRJ-01-2022-0035</a></div></div></div>
+    <div class="pub"><div class="yr">2022</div><div><div class="t">Textile-apparel manufacturing and material waste management in the circular economy: A conceptual model to achieve sustainable development goal (SDG) 12 for Bangladesh</div><div class="m">Akter, M. M. K., Haq, U. N., Rahman, M. M., &amp; Shiyak, A. U. — <i>Cleaner Environmental Systems</i></div><div class="note">First author · material stream mapping across 17 factories</div></div></div>
+    <div class="placeholder">Add DOIs for the 2022, 2025 (JAMP) and any other papers, and confirm the author list of the 2022 paper (your CV spells one co-author "Huq"/"Haq" inconsistently).</div>
+
+    <h3>Book chapters</h3>
+    <div class="pub"><div class="yr">2024</div><div><div class="t">Sustainable development and circular economy</div><div class="m">Akter, M. M. K., Haq, U. N., &amp; Uddin, M. A. — in <i>Waste Management in the Circular Economy</i></div></div></div>
+    <div class="pub"><div class="yr">2024</div><div><div class="t">Recycling practices of pre-consumer waste from textile industry</div><div class="m">Azad, A. K., Haq, U. N., Akter, M. M. K., &amp; Uddin, M. A. — in <i>Sustainable Manufacturing Practices in Textiles and Fashion</i></div></div></div>
+    <div class="placeholder">Publisher and editors for both chapters.</div>
+
+    <h3>Government technical reports</h3>
+    <div class="pub"><div class="yr">2025</div><div><div class="t">Recycling and the Circular Economy — NYSDEC Task 4 Report</div><div class="m">Akter, M. M. K., Tonjes, D. J., Wang, Y., Firmansyah, F., Thyberg, K., &amp; Hewitt, E. — Waste Data and Analysis Center, Stony Brook University; commissioned by NYSDEC</div><div class="note">Lead author</div></div></div>
+    <div class="pub"><div class="yr">2023–24</div><div><div class="t">MSW Waste Characterization Reports: Madison County and Development Authority of the North Country (DANC)</div><div class="m">Akter, M. M. K., Firmansyah, F., Thyberg, K., &amp; Hewitt, E. — Waste Data and Analysis Center; commissioned by NYSDEC</div><div class="note">Lead author, Task 1 deliverables</div></div></div>
+
+    <h3>Conference presentations</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>When</th><th>Title</th><th>Venue</th></tr></thead>
+      <tbody>
+        <tr><td class="code">May 2026</td><td>Measurement and comparison of municipal solid waste jurisdictions with a multivariate approach</td><td>Federation of NY Solid Waste Management Associations, Lake George, NY</td></tr>
+        <tr><td class="code">May 2026</td><td>Multivariate analysis of waste composition data: how does it help policy design?</td><td>PhD Workshop in Climate &amp; Energy Decision Making, Carnegie Mellon University, Pittsburgh</td></tr>
+        <tr><td class="code">Jun 2024</td><td>Circular economy in a complex production supply chain: case from the textile industry</td><td>A&amp;WMA Annual Conference, Calgary</td></tr>
+        <tr><td class="code">Apr 2024</td><td>Material circularity of pre-consumer textile solid waste</td><td>REMADE Circular Economy Tech Summit, Washington DC</td></tr>
+        <tr><td class="code">Feb 2024</td><td>Textile solid waste recycling: a circular economy approach</td><td>Global Waste Management Symposium, California</td></tr>
+        <tr><td class="code">Jun 2023</td><td>Textile solid waste recycling: a circular economy approach</td><td>A&amp;WMA Annual Conference, Orlando</td></tr>
+        <tr><td class="code">2021</td><td>Bangladeshi young consumers and sustainable apparel</td><td>ITAA Annual Conference</td></tr>
+        <tr><td class="code">2013</td><td>Development of denim: how the fashion world looks into it</td><td>ICMERE 2013, Chittagong</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Early publications (Bangladesh)</h3>
+    <div class="pub"><div class="yr">2015</div><div><div class="t">Analysis of the factors affecting the lead time for export of readymade apparels from Bangladesh; proposal for strategic reduction of lead time</div><div class="m">Kader, S., &amp; Akter, M. M. K. — <i>European Scientific Journal</i>, 10(33)</div></div></div>
+    <div class="pub"><div class="yr">2015</div><div><div class="t">Development of different denim effect on knitted fabric and comparative analysis on the basis of physical and dimensional properties</div><div class="m">Didar, S. A., Patwary, S. U., Kader, S., Akter, M. M. K., &amp; Ahmed, T. — <i>Research Journal of Engineering Sciences</i>, 4(4), 9–15</div></div></div>
+
+    <h3>Methods and tools</h3>
+    <div class="grid-3">
+      <div class="card"><h4>Waste characterization</h4><p>Physical waste sorting and field sampling design; MSW compositional analysis; waste fraction quantification and validation; material stream mapping; landfill and diversion metrics.</p></div>
+      <div class="card"><h4>Quantitative</h4><p>R; multivariate statistics (hierarchical clustering, ILR transformation, Aitchison/Euclidean distance, segmentation); PCA; data visualization (heatmaps, dendrograms); survey design and analysis (n &gt; 400).</p></div>
+      <div class="card"><h4>Policy &amp; reporting</h4><p>Government technical reporting for NYSDEC; circular economy and EPR policy analysis; stakeholder presentations to county and state waste managers.</p></div>
+    </div>
+
+    <h3>Awards and funding</h3>
+    <ul class="plain">
+      <li><b>2026 EREF Scholarship</b> — Environmental Research &amp; Education Foundation</li>
+      <li><b>2026 NYSASWM Scholarship</b> — New York State Association for Solid Waste Management</li>
+      <li><b>2026 SWANA Scholarship</b> — Solid Waste Association of North America</li>
+    </ul>
+    <div class="placeholder">Confirm the exact scholarship names and amounts (these come from the WDAC site), and add any earlier awards, travel grants, or the PhD funding source.</div>
+    <div class="placeholder">Optional: a short "Media &amp; coverage" list, e.g. industry press coverage of the 2022 circular-economy paper.</div>
+  </section>
+
+  <!-- ===================== 4. OTHER WORK ===================== -->
+  <section class="tab" id="tab-other" aria-labelledby="h-other">
+    <header class="tab-head">
+      <p class="eyebrow">Other work of significance</p>
+      <h1 id="h-other">Editing, training, and building institutions.</h1>
+    </header>
+    <p class="lede">Work that sits outside the university but shaped how I think: a decade of trade journalism, a national skills program, and a technology-transfer proposal.</p>
+
+    <h3>Editorial work</h3>
+    <div class="feature">
+      <div>
+        <p><b>Managing Editor, <i>Textile Focus</i> (since 2016) and <i>Denim Focus</i></b></p>
+        <p>I have edited two internationally circulated textile and apparel business magazines published from Dhaka, commissioning and editing technical articles on trade, technology and innovation in the sector, and writing more than a hundred of my own. The work keeps me close to what mills and brands are actually doing, which is where most of my research questions come from.</p>
+        <p>Earlier I was part of the technical team at <i>Bangladesh Textile Today</i> (2011–2015), starting as a student research assistant.</p>
+        <div class="placeholder">Circulation or readership figures, the year <i>Denim Focus</i> launched, three or four of your best articles with links, and the magazine's website.</div>
+      </div>
+      <div class="photo sq">Magazine covers, or you at a trade show or interview.</div>
+    </div>
+
+    <h3>Skills development and training</h3>
+    <ul class="plain">
+      <li><b>SEIP certified trainer and assessor</b> — Skills for Employment Investment Program (Ministry of Finance, Bangladesh; implemented by BTMA). Trained in pedagogy and assessment at ITE Singapore; taught Garments CAD and merchandising batches at NITER and served as external assessor.</li>
+      <li><b>NITER SEIP coordination</b> — involved in SEIP planning, class scheduling and operational policy at NITER (2016–2020).</li>
+      <li><b>Career and pedagogy workshops</b> — designed workshops on career planning for textile graduates and on teaching methodology for TVET professionals.</li>
+    </ul>
+    <div class="placeholder">Your title in the NITER SEIP program and the number of trainees or batches.</div>
+
+    <h3>Technology transfer and institutional projects</h3>
+    <ul class="plain">
+      <li><b>HEQEP proposal: Technology Transfer Office for the textile and apparel sector</b> — developed the complete proposal as Deputy Sub-Project Manager under the Higher Education Quality Enhancement Project.</li>
+      <li><b>IP Day 2019</b> — prepared and delivered a talk on intellectual property and textiles.</li>
+      <li><b>BUTEX alumni and institutional work</b> — <span class="placeholder" style="display:inline;padding:.1rem .4rem">describe (alumni platform MOU, BUTEX Day 2021 communications?)</span></li>
+      <li><b>NITER Business Club</b> — helped found a student business club at NITER.</li>
+    </ul>
+    <div class="placeholder">Confirm the HEQEP outcome (funded? year?) and anything else you consider significant: consulting, industry advisory roles, professional memberships (A&amp;WMA, SWANA, ITAA?), peer reviewing for journals.</div>
+
+    <h3>Peer review</h3>
+    <div class="placeholder">Journals you review for (your folder shows manuscripts from <i>International Journal of Innovation and Technology Management</i> and <i>PLOS Sustainability &amp; Transformation</i>, 2025).</div>
+  </section>
+
+  <!-- ===================== 5. SOCIAL WORK ===================== -->
+  <section class="tab" id="tab-social" aria-labelledby="h-social">
+    <header class="tab-head">
+      <p class="eyebrow">Social work</p>
+      <h1 id="h-social">Outside the lab.</h1>
+    </header>
+    <div class="placeholder">I have nothing on file for this section. Send me, in any order: the organisations or communities you have worked with (in Bangladesh and in New York), your role, the years, and what the work involved. Photos help here more than anywhere else on the site.</div>
+    <div class="grid-3">
+      <div class="card"><h4>Activity 1</h4><div class="placeholder">Name, years, what you did.</div><div class="photo wide">Photo</div></div>
+      <div class="card"><h4>Activity 2</h4><div class="placeholder">Name, years, what you did.</div><div class="photo wide">Photo</div></div>
+      <div class="card"><h4>Activity 3</h4><div class="placeholder">Name, years, what you did.</div><div class="photo wide">Photo</div></div>
+    </div>
+    <h3>Community teaching</h3>
+    <p>Taught computational skills to high-school students in New York, including a workshop on Pareto analysis in Excel.</p>
+    <div class="placeholder">Where and when this was, and whether it was through a program you would like named.</div>
+  </section>
+
+  <footer>
+    <span>Maeen Md Khairul Akter · Stony Brook University</span>
+    <span>Updated September 2026 · <span class="mono" style="color:var(--ph)">draft with placeholders</span></span>
+  </footer>
+  </main>
+</div>
+
+<script>
+(function(){
+  var links=document.querySelectorAll('nav.tabs a[data-tab]');
+  var tabs=document.querySelectorAll('section.tab');
+  function show(id){
+    var found=false;
+    tabs.forEach(function(s){var on=s.id==='tab-'+id; s.classList.toggle('active',on); if(on)found=true;});
+    if(!found){ id='about'; tabs.forEach(function(s){s.classList.toggle('active',s.id==='tab-about');}); }
+    links.forEach(function(a){ if(a.dataset.tab===id)a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+    var main=document.querySelector('.main'); if(main) main.scrollIntoView({block:'start'});
+  }
+  links.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault(); history.replaceState(null,'','#'+a.dataset.tab); show(a.dataset.tab);});});
+  window.addEventListener('hashchange',function(){show(location.hash.replace('#','')||'about');});
+  var start=location.hash.replace('#','')||'about';
+  tabs.forEach(function(s){s.classList.toggle('active',s.id==='tab-'+start)});
+  if(!document.querySelector('section.tab.active')) start='about';
+  links.forEach(function(a){ if(a.dataset.tab===start)a.setAttribute('aria-current','page'); });
+  tabs.forEach(function(s){s.classList.toggle('active',s.id==='tab-'+start)});
+})();
+</script>
+
+</body>
+</html>
