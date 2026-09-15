@@ -43,10 +43,10 @@ p{margin:0 0 1rem;max-width:68ch}
 .lede{font-family:"Newsreader",Georgia,serif;font-size:1.25rem;line-height:1.5;color:var(--ink-2);max-width:60ch}
 
 /* shell */
-.shell{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}
+.shell{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:100vh}
 .side{position:sticky;top:env(safe-area-inset-top,0px);height:100vh;padding:2.4rem 1.6rem 2rem 2rem;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2rem;background:var(--bg)}
 .brand{display:flex;flex-direction:column;gap:.35rem}
-.brand .name{font-family:"Newsreader",Georgia,serif;font-size:1.35rem;font-weight:600;line-height:1.2;color:var(--ink)}
+.brand .name{font-family:"Newsreader",Georgia,serif;font-size:1.2rem;font-weight:600;line-height:1.2;color:var(--ink);white-space:nowrap}
 .brand .role{font-size:.82rem;color:var(--muted);line-height:1.4}
 nav.tabs{display:flex;flex-direction:column;gap:.15rem}
 nav.tabs a{display:flex;align-items:baseline;gap:.6rem;padding:.5rem .7rem;border-radius:6px;color:var(--ink-2);text-decoration:none;font-size:.93rem;font-weight:500;border-left:3px solid transparent}
@@ -66,6 +66,7 @@ header.tab-head{margin-bottom:2rem;padding-bottom:1.4rem;border-bottom:2px solid
 .photo{border:1.5px dashed var(--ph-line);background:var(--ph-bg);color:var(--ph);border-radius:8px;display:grid;place-items:center;text-align:center;padding:1rem;font-size:.82rem;line-height:1.4;max-width:100%}
 .photo::before{content:"Photo";font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:.35rem}
 .photo.portrait{aspect-ratio:4/5;width:100%;max-width:280px}
+.portrait-img{display:block;width:100%;max-width:280px;height:auto;border-radius:8px;box-shadow:var(--shadow)}
 .photo.wide{aspect-ratio:16/7;width:100%}
 .photo.sq{aspect-ratio:1;width:100%}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:start}
@@ -132,7 +133,7 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
   <aside class="side">
     <div class="brand">
       <span class="name">Maeen Md Khairul Akter</span>
-      <span class="role">PhD Candidate, Technology, Policy &amp; Innovation<br>Stony Brook University</span>
+      <span class="role">PhD Candidate, Technology, Policy &amp; Innovation<br>Department of Technology, AI and Society<br>Stony Brook University</span>
     </div>
     <nav class="tabs" aria-label="Sections">
       <a href="#about" data-tab="about"><span class="n">1</span>About me</a>
@@ -143,10 +144,10 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     </nav>
     <div class="links">
       <a href="mailto:maeen.mdkhairulakter@stonybrook.edu">Email</a>
-      <a href="#" id="lnk-scholar">Google Scholar <span class="mono" style="color:var(--ph)">[add URL]</span></a>
-      <a href="#" id="lnk-linkedin">LinkedIn <span class="mono" style="color:var(--ph)">[add URL]</span></a>
+      <a href="https://scholar.google.com/citations?user=WhM4Pz0AAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/maeen-md-khairul-akter-a00b4750/">LinkedIn</a>
       <a href="https://wastedata.info/about-us/">Waste Data &amp; Analysis Center</a>
-      <a href="#" id="lnk-cv">CV (PDF) <span class="mono" style="color:var(--ph)">[add link]</span></a>
+      <a href="#" id="lnk-cv" download="Maeen_Md_Khairul_Akter_CV.pdf">CV (PDF)</a>
     </div>
   </aside>
 
@@ -162,20 +163,20 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <div>
         <p class="lede">I am a textile engineer turned waste-systems researcher. I spent nine years teaching and building an engineering-management department in Dhaka; now I spend my days sorting, weighing and modelling municipal solid waste across New York State so that the people who write waste policy have numbers they can trust.</p>
         <h4>Who I am</h4>
-        <p>I am a PhD candidate in Technology, Policy and Innovation at Stony Brook University's Department of Technology and Society, and a researcher at the <a href="https://wastedata.info">Waste Data and Analysis Center (WDAC)</a>. Before coming to the United States in 2022, I was an Assistant Professor of Textile Engineering Management at the Bangladesh University of Textiles (BUTEX), and before that a lecturer at the National Institute of Textile Engineering and Research (NITER). I started on a weaving floor as a production engineer at Envoy Textiles, which is where I first noticed how much material a factory throws away and how little anyone measured it.</p>
+        <p>I am a PhD candidate in Technology, Policy and Innovation in the <a href="https://www.stonybrook.edu/dtas/students/phd-current-cohort.html">Department of Technology, AI and Society</a> (formerly the Department of Technology and Society) at Stony Brook University, and a researcher at the <a href="https://wastedata.info">Waste Data and Analysis Center (WDAC)</a>. Before coming to the United States in 2022, I was an Assistant Professor of Textile Engineering Management at the Bangladesh University of Textiles (BUTEX), and before that a lecturer at the National Institute of Textile Engineering and Research (NITER). I started on a weaving floor as a production engineer at Envoy Textiles, which is where I first noticed how much material a factory throws away and how little anyone measured it.</p>
         <h4>What I do</h4>
-        <p>My dissertation develops a multivariate, compositional-data framework for measuring and comparing municipal solid waste systems, so that jurisdictions can be compared as whole systems rather than one material at a time. The empirical base is the NYSDEC-funded statewide waste characterization program, where I design and run physical waste sorts and lead the technical reporting. In parallel I keep a research line on textile waste and the circular economy in Bangladesh: material flow analysis of pre-consumer waste, informal recycling networks, and consumer attitudes toward sustainable apparel.</p>
+        <p>My dissertation develops a multivariate, compositional-data framework for measuring and comparing municipal solid waste systems, so that jurisdictions can be compared as whole systems rather than one material at a time. The empirical base is the NYSDEC-funded statewide waste characterization program, where I design and run physical waste sorts and contribute to the technical reporting. In parallel I keep a research line on textile waste and the circular economy in Bangladesh: material flow analysis of pre-consumer waste, informal recycling networks, and consumer attitudes toward sustainable apparel.</p>
         <h4>What I like</h4>
-        <div class="placeholder">A short, personal paragraph: what you enjoy outside work, what you read, what you cook, what you do with your family in Johnson City. Two to four sentences, in your own voice.</div>
+        <p>When I am not working I like to spend time with my family and friends. As a father of three, I love playing with my children and taking them places. I find cooking therapeutic and travelling inspiring.</p>
         <h4>Where I am going</h4>
-        <p>My long-term goal is a career in sustainable textile waste management and circular economy in the United States, working at the junction of measurement, industry practice and public policy. I want the tools I build for municipal waste to be equally usable for the textile and apparel waste streams that I know from the inside.</p>
-        <div class="placeholder">Optional: one or two sentences on the specific role you are aiming at after the PhD (faculty, government research, industry R&amp;D) and what you would want a department like Auburn's to know about you.</div>
+        <p>My career goal is to become an interdisciplinary professor and researcher in the sustainable transformation of the textile and apparel industry. The PhD is how I am building the toolkit for that. Studying municipal solid waste as a system, rather than as a list of materials, has taught me how to measure material flows rigorously, how to compare jurisdictions and programs on equal terms, and how to turn sort data into evidence that a policymaker can act on.</p>
+        <p>Those are the questions the textile and apparel industry needs answered next: where its waste actually goes, which recovery routes are worth investing in, and how to design policy that works for a supply chain with a large informal sector. I want to bring the measurement discipline of waste systems research back to the industry I came from, and to teach the next generation of engineers and managers to think that way from the start.</p>
       </div>
       <div>
-        <div class="photo portrait">A professional portrait, ideally not a passport-style crop. Natural light, plain background.</div>
+        <img class="portrait-img" id="portrait" alt="Maeen Md Khairul Akter">
         <dl class="facts">
           <dt>Based in</dt><dd>Johnson City, New York</dd>
-          <dt>Affiliation</dt><dd>Dept. of Technology and Society, Stony Brook University</dd>
+          <dt>Affiliation</dt><dd>Department of Technology, AI and Society, Stony Brook University</dd>
           <dt>Center</dt><dd>Waste Data and Analysis Center (WDAC)</dd>
           <dt>Expected</dt><dd>PhD, May 2027</dd>
           <dt>Fields</dt><dd>Solid waste characterization, compositional data analysis, circular economy, textile waste, SDG 12</dd>
@@ -186,7 +187,7 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
 
     <h3>Education</h3>
     <ul class="timeline">
-      <li><span class="when">2022 – 2027 (expected)</span><span class="what">Ph.D., Technology, Policy and Innovation</span><br><span class="where">Department of Technology and Society, Stony Brook University, New York</span><br><span class="where">Dissertation: <i>Measuring and Comparing Municipal Solid Waste Systems in the United States: Multivariate Evidence for Policy Design and Evaluation</i></span></li>
+      <li><span class="when">2022 – 2027 (expected)</span><span class="what">Ph.D., Technology, Policy and Innovation</span><br><span class="where">Department of Technology, AI and Society (formerly Technology and Society), Stony Brook University, New York</span><br><span class="where">Dissertation: <i>Measuring and Comparing Municipal Solid Waste Systems in the United States: Multivariate Evidence for Policy Design and Evaluation</i></span></li>
       <li><span class="when">2019</span><span class="what">M.S., Management of Technology</span><br><span class="where">Bangladesh University of Engineering and Technology (BUET), Dhaka</span></li>
       <li><span class="when">2013</span><span class="what">B.Sc., Textile Engineering (Management)</span><br><span class="where">Bangladesh University of Textiles (BUTEX), Dhaka</span></li>
     </ul>
@@ -453,8 +454,10 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
   </main>
 </div>
 
+<script src="assets.js"></script>
 <script>
 (function(){
+  if(window.SITE_ASSETS){document.getElementById("portrait").src=SITE_ASSETS.photo;document.getElementById("lnk-cv").href=SITE_ASSETS.cv;}
   var links=document.querySelectorAll('nav.tabs a[data-tab]');
   var tabs=document.querySelectorAll('section.tab');
   function show(id){
