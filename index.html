@@ -88,6 +88,9 @@ tbody tr:hover td{background:var(--surface)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.2rem 1.3rem;box-shadow:var(--shadow)}
 .card h4{margin-top:0}
 .card p:last-child{margin-bottom:0}
+.obe .card .eyebrow{margin-bottom:.2rem}
+.obe .card h4{font-family:"Newsreader",Georgia,serif;font-size:1.15rem;font-weight:500;margin:.1rem 0 .5rem}
+.obe .card p{font-size:.9rem}
 .feature{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:1.6rem;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.4rem 1.5rem;box-shadow:var(--shadow);margin:1rem 0 1.5rem}
 .stats{display:flex;flex-wrap:wrap;gap:1.6rem;margin:1rem 0 1.5rem}
 .stat{display:flex;flex-direction:column}
@@ -124,6 +127,9 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
   .side .links{margin-top:0;flex-direction:row;flex-wrap:wrap;gap:1rem}
   .main{padding:1.8rem 1.2rem 4rem}
   .about-top,.grid-2,.grid-3,.feature{grid-template-columns:1fr}
+}
+@media (max-width:1100px){
+  .grid-3.obe{grid-template-columns:1fr}
   .photo.portrait{max-width:220px}
 }
 @media (prefers-reduced-motion:no-preference){nav.tabs a{transition:background .15s,color .15s}}
@@ -251,17 +257,30 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     <p style="font-size:.88rem;color:var(--ink-2)">Also taught Technology Management in the BUTEX MBA program (2019), and supervised industrial attachments and final-year project work (see Mentorship below).</p>
 
     <h3>Curriculum development and quality assurance</h3>
-    <p>Much of my departmental service at BUTEX ran through the Institutional Quality Assurance Cell (IQAC), where the Department of Textile Engineering Management (DoTEM) went through self-assessment, improvement planning and the move to outcome-based education.</p>
-    <div class="grid-2">
+    <p>When BUTEX moved its B.Sc. programs to outcome-based education (OBE) under the Institutional Quality Assurance Cell (IQAC), each course had to be rebuilt from the outcome backwards: a rationale, measurable course learning outcomes (CLOs), a mapping of every CLO to the program learning outcomes (PLOs), a week-by-week lesson plan tied to those outcomes, and an assessment scheme (40% continuous, 60% end-of-term). I carried out that analysis and wrote the OBE course profile for three courses in the Textile Engineering Management curriculum.</p>
+    <div class="grid-3 obe">
       <div class="card">
-        <h4>Outcome-based curriculum (OBE)</h4>
-        <p>Drafted the department's vision, mission and program educational outcomes; mapped course outcomes to program learning outcomes across the B.Sc. curriculum; wrote OBE course profiles and lesson plans with teaching-learning and assessment strategies for each contact hour.</p>
-        <p>New course contents authored for the revised curriculum include <i>Sustainability and Compliance Management</i> (TEM-4203), <i>Business Analytics Lab</i> (TEM-4201), <i>Digital Presentation Techniques</i>, <i>Textile Technology Management</i>, <i>E-commerce and International Trade</i>, and <i>Textile Quality Management</i>.</p>
+        <p class="eyebrow">TEM 304 · Level 3 · 1 credit lab</p>
+        <h4>Project Management Lab</h4>
+        <p>Rebuilt the practical as a fourteen-week group project on a textile-related product, from initiating an idea through commercial, technical and environmental feasibility, network analysis (CPM, PERT, Gantt), risk and monitoring, to a final report in MS Project. Five CLOs, mapped to PLOs 3, 4, 5 and 11, so that students' work in the lab feeds the program's outcomes on investigation, tool use and project management.</p>
       </div>
       <div class="card">
+        <p class="eyebrow">TEM 407 · Level 4 · 3 credits</p>
+        <h4>Textile and Apparel Merchandising</h4>
+        <p>Redesigned the core merchandising course around the order-to-shipment cycle: the fashion life cycle and the sector's role in the economy, buying plans, sampling, trims and accessories sourcing, production planning and inspection, tech packs, purchase orders, L/C and incoterms, and the computation of fabric consumption, SMV, cost sheets and critical paths. Four CLOs, mapped to PLOs 1, 2, 5 and 9.</p>
+      </div>
+      <div class="card">
+        <p class="eyebrow">TEM 415 · Level 4 · 2 credits · new course</p>
+        <h4>Sustainability and Compliance</h4>
+        <p>Designed a new course from scratch for the revised curriculum: sustainability concepts and theories, the three pillars, ISO 9000/14000/26000-family standards, textile certifications (STeP, OEKO-TEX Standard 100, GOTS, Global Recycle Standard, Fair Trade, ETI), compliance management systems, social and environmental compliance audits, and the compliance regime of the Bangladesh textile industry under its labour law. Five CLOs, mapped to PLOs 2, 3, 4, 5 and 7.</p>
+      </div>
+    </div>
+    <p style="font-size:.88rem;color:var(--ink-2);margin-top:1rem">The three profiles form part of the department's approved OBE curriculum for the B.Sc. in Textile Engineering (Management).</p>
+    <h4>Quality assurance and academic planning</h4>
+    <div class="grid-3">
+      <div class="card">
         <h4>Self-assessment and improvement plan</h4>
-        <p>Contributed to the DoTEM Self-Assessment Report, the External Peer Review exit report response, and the Post Self-Assessment Improvement Plan (PSAIP), including the financial summary, annual action plan and quarterly progress reports through the implementation year.</p>
-        <p>Prepared course-outcome documentation and faculty profiles for BAETE engineering accreditation.</p>
+        <p>Contributed to the DoTEM Self-Assessment Report, the External Peer Review exit report response, and the Post Self-Assessment Improvement Plan (PSAIP), including the financial summary, annual action plan and quarterly progress reports through the implementation year; prepared course-outcome documentation and faculty profiles for BAETE accreditation.</p>
       </div>
       <div class="card">
         <h4>Academic loss recovery, 2021</h4>
@@ -270,10 +289,9 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <div class="card">
         <h4>NITER curriculum and assessment</h4>
         <p>At NITER, worked on the B.Sc. in Textile Engineering syllabus alignment with BUTEX and on new assessment guidelines.</p>
-        <div class="placeholder">Add your specific role at NITER (committee, coordinator?) and anything on the SEIP operational policy you helped draft.</div>
       </div>
     </div>
-    <div class="placeholder" style="margin-top:1rem">Names and years of the IQAC committee roles you held (member, coordinator, focal person), and the year DoTEM's OBE curriculum was approved.</div>
+    <div class="placeholder">IQAC roles and dates still to add: the committee roles you held (member, coordinator, focal person), the year the OBE curriculum was approved, and your role at NITER.</div>
 
     <h3>Idea &amp; Innovation Fair 2019</h3>
     <div class="feature">
