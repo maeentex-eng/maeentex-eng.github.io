@@ -60,6 +60,18 @@ section.tab{display:none}
 section.tab.active{display:block}
 header.tab-head{margin-bottom:2rem;padding-bottom:1.4rem;border-bottom:2px solid var(--ink)}
 
+/* testimonials */
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin:0 0 1.5rem}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.2rem 1.3rem;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.q blockquote{margin:0 0 .8rem;font-family:"Newsreader",Georgia,serif;font-size:1.03rem;line-height:1.5;color:var(--ink)}
+.q blockquote + blockquote{margin-top:-.2rem}
+.q .who{margin-top:auto;padding-top:.7rem;border-top:1px solid var(--line-soft);display:flex;gap:.7rem;align-items:center}
+.q .who img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;border:1px solid var(--line)}
+.q .who .nm{font-weight:600;font-size:.9rem;line-height:1.25}
+.q .who .rl{font-size:.8rem;color:var(--muted);line-height:1.35}
+.q .crs{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.05em;color:var(--indigo);text-transform:uppercase;margin:0 0 .6rem}
+@media (max-width:860px){.quotes{grid-template-columns:1fr}}
+
 /* components */
 .placeholder{border:1.5px dashed var(--ph-line);background:var(--ph-bg);color:var(--ph);border-radius:6px;padding:.75rem 1rem;font-size:.88rem;line-height:1.45;margin:0 0 1rem;max-width:68ch}
 .placeholder::before{content:"To add";font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:.25rem;opacity:.85}
@@ -148,7 +160,7 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <a href="#teaching" data-tab="teaching"><span class="n">2</span>Teaching &amp; mentorship</a>
       <a href="#research" data-tab="research"><span class="n">3</span>Research &amp; publications</a>
       <a href="#other" data-tab="other"><span class="n">4</span>Other work of significance</a>
-      <a href="#social" data-tab="social"><span class="n">5</span>Social work</a>
+      <a href="#testimonials" data-tab="testimonials"><span class="n">5</span>Student testimonials</a>
     </nav>
     <div class="links">
       <a href="mailto:maeen.mdkhairulakter@stonybrook.edu">Email</a>
@@ -456,21 +468,94 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     <p>I review manuscripts for the <i>International Journal of Innovation and Technology Management</i> and for <i>PLOS Sustainability &amp; Transformation</i>. Reviewing in both a management journal and a sustainability journal keeps me honest about the different standards of evidence the two literatures accept.</p>
   </section>
 
-  <!-- ===================== 5. SOCIAL WORK ===================== -->
-  <section class="tab" id="tab-social" aria-labelledby="h-social">
+  <!-- ===================== 5. TESTIMONIALS ===================== -->
+  <section class="tab" id="tab-testimonials" aria-labelledby="h-testimonials">
     <header class="tab-head">
-      <p class="eyebrow">Social work</p>
-      <h1 id="h-social">Outside the lab.</h1>
+      <p class="eyebrow">Student testimonials</p>
+      <h1 id="h-testimonials">What the students say, in their own words.</h1>
     </header>
-    <div class="placeholder">I have nothing on file for this section. Send me, in any order: the organisations or communities you have worked with (in Bangladesh and in New York), your role, the years, and what the work involved. Photos help here more than anywhere else on the site.</div>
-    <div class="grid-3">
-      <div class="card"><h4>Activity 1</h4><div class="placeholder">Name, years, what you did.</div><div class="photo wide">Photo</div></div>
-      <div class="card"><h4>Activity 2</h4><div class="placeholder">Name, years, what you did.</div><div class="photo wide">Photo</div></div>
-      <div class="card"><h4>Activity 3</h4><div class="placeholder">Name, years, what you did.</div><div class="photo wide">Photo</div></div>
+    <p class="lede">In September 2026 I sent a structured feedback form to former students at BUTEX and NITER, asking what they had actually used since. Thirteen replied. Their words are reproduced below without alteration.</p>
+
+    <div class="stats">
+      <div class="stat"><b>4.85</b><span>average teaching effectiveness, out of 5</span></div>
+      <div class="stat"><b>13</b><span>respondents</span></div>
+      <div class="stat"><b>2013&ndash;2021</b><span>years taught</span></div>
+      <div class="stat"><b>6</b><span>countries respondents now work or study in</span></div>
     </div>
-    <h3>Community teaching</h3>
-    <p>Taught computational skills to high-school students in New York, including a workshop on Pareto analysis in Excel.</p>
-    <div class="placeholder">Where and when this was, and whether it was through a program you would like named.</div>
+    <p style="font-size:.88rem;color:var(--ink-2)">Eleven respondents rated teaching effectiveness 5 out of 5 and two rated it 4. They are now in Bangladesh, the United States, Hong Kong, China, India and the United Kingdom, in merchandising, procurement, garment technology and graduate research. Every respondent gave written consent for their response to be used here.</p>
+
+    <h3>Selected responses</h3>
+    <div class="quotes">
+
+      <div class="q">
+        <p class="crs">Industrial management · International marketing · Cost accounting · 2013&ndash;14</p>
+        <blockquote>&ldquo;These courses gave me a strong foundation in basic accounting, financial concepts, management, market analysis, and decision-making. I was able to apply this knowledge directly during my professional experience as an R&amp;D Officer at Ha-Meem Denim Ltd. The management, accounting, and marketing concepts I learned in these courses helped me better understand cost considerations, market demand, and the business aspects of product development.&rdquo;</blockquote>
+        <blockquote>&ldquo;Beyond classroom teaching, Mr. Maeen Md Khairul Akter was also an important career mentor to me. He generously shared his knowledge, experiences, and guidance, which helped broaden my perspective about higher education and professional development.&rdquo;</blockquote>
+        <div class="who"><div><div class="nm">Ejajul Hoque</div><div class="rl">Research Assistant, University of Cincinnati, USA</div></div></div>
+      </div>
+
+      <div class="q">
+        <p class="crs">Economic issues in textile and apparel business · 2016&ndash;17</p>
+        <blockquote>&ldquo;The course helped me understand economic factors, cost control, and cost-effectiveness in business decisions. I apply this knowledge in my current research on high-performance composite materials by evaluating their cost-effectiveness for applications in automotive, aerospace, and defense. This has helped me consider not only material performance but also economic feasibility.&rdquo;</blockquote>
+        <blockquote>&ldquo;He provided information about master&rsquo;s programs at BUET and guided me on higher-study opportunities and the application process. I have always considered him one of my favorite teachers and a valuable mentor throughout my academic journey.&rdquo;</blockquote>
+        <div class="who"><div><div class="nm">Barshan Dev</div><div class="rl">Joint Graduate Research Assistant, University of Tennessee Knoxville &amp; Oak Ridge National Laboratory</div></div></div>
+      </div>
+
+      <div class="q">
+        <p class="crs">Entrepreneurship and project development · 2021</p>
+        <blockquote>&ldquo;Maeen Sir helped to think independently and out of the box to explore what to be done in future.&rdquo;</blockquote>
+        <blockquote>&ldquo;During the academic thesis defense he helped us a lot about how to write a research paper, made us aware about plagiarism and present confidently towards everyone.&rdquo;</blockquote>
+        <div class="who"><div><div class="nm">Nazifa Musarrat</div><div class="rl">Garment Technologist, Marks &amp; Spencer</div></div></div>
+      </div>
+
+      <div class="q">
+        <p class="crs">Merchandising · Industrial management · Entrepreneurship · Quality · Cost accounting · 2018</p>
+        <blockquote>&ldquo;As I am a merchandiser, I am applying the knowledge while solving any costing and production related problems whenever they arise. I also understand the root cause of any issues due to having proper knowledge related to the issues.&rdquo;</blockquote>
+        <blockquote>&ldquo;I had done my final year project work initiated from the idea given by you which was related to ergonomics. I am planning to publish a research paper related to my project work. Your teaching was always practical and knowledge oriented.&rdquo;</blockquote>
+        <div class="who"><div><div class="nm">Mahi Nuzzaman</div><div class="rl">Merchandiser</div></div></div>
+      </div>
+
+      <div class="q">
+        <p class="crs">Industrial management · Cost and management accounting · 2015</p>
+        <blockquote>&ldquo;The Industrial Management course helped me understand how to organize work better, and I used those ideas to manage projects more smoothly. The Cost and Management Accounting course gave me basic skills to handle budgets and check expenses, which I have applied in my research and daily tasks.&rdquo;</blockquote>
+        <div class="who"><div><div class="nm">Taosif Ahmed</div><div class="rl">Research Associate, The Hong Kong Polytechnic University</div></div></div>
+      </div>
+
+      <div class="q">
+        <p class="crs">Industrial management · 2018&ndash;20</p>
+        <blockquote>&ldquo;Risk factor assessment in on time product delivery &mdash; I always try to apply this skill now as well.&rdquo;</blockquote>
+        <blockquote>&ldquo;I started my article writing journey under your supervision at Textile Focus. It was a great learning opportunity I believe.&rdquo;</blockquote>
+        <div class="who"><div><div class="nm">Mohammad Ishaque</div><div class="rl">Graduate Student, Donghua University, China</div></div></div>
+      </div>
+
+    </div>
+
+    <h3>All respondents</h3>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Name</th><th>Current position</th><th>Courses taken</th><th>Years</th></tr></thead>
+      <tbody>
+        <tr><td>Ejajul Hoque</td><td>Research Assistant, University of Cincinnati, USA</td><td>Industrial Management; International Marketing of Textile and Apparel; Cost &amp; Management Accounting</td><td class="code">2013&ndash;14</td></tr>
+        <tr><td>Taosif Ahmed</td><td>Research Associate, Hong Kong Polytechnic University</td><td>Industrial Management; Cost &amp; Management Accounting</td><td class="code">2015</td></tr>
+        <tr><td>Barshan Dev</td><td>Joint Graduate Research Assistant, University of Tennessee Knoxville &amp; Oak Ridge National Laboratory</td><td>Economic Issues in Textile and Apparel Business</td><td class="code">2016&ndash;17</td></tr>
+        <tr><td>Bappi Hossain</td><td>Self-employed</td><td>Introduction to Textiles; Merchandising; Industrial Management; Entrepreneurship; Quality Management; Textile Testing</td><td class="code">2016&ndash;17</td></tr>
+        <tr><td>A.K.M. Muhtasin Ayan</td><td>Development Merchandiser, Vogue Sourcing</td><td>Merchandising; Industrial Management; Entrepreneurship; Quality Management; Cost &amp; Management Accounting</td><td class="code">2017&ndash;18</td></tr>
+        <tr><td>Md. Mobinur Rahman</td><td>Merchandiser, Aman Tex Limited</td><td>Merchandising; Entrepreneurship; Quality Management; Financial Management</td><td class="code">2017&ndash;21</td></tr>
+        <tr><td>Israt Zahan Mim</td><td>Senior Procurement Officer, Hameem Group</td><td>Industrial Management; International Marketing of Textile and Apparel</td><td class="code">2018</td></tr>
+        <tr><td>Mahi Nuzzaman</td><td>Merchandiser</td><td>Merchandising; Industrial Management; Entrepreneurship; Quality Management; Cost &amp; Management Accounting</td><td class="code">2018</td></tr>
+        <tr><td>Mohammad Ishaque</td><td>Graduate Student, Donghua University, China</td><td>Industrial Management</td><td class="code">2018&ndash;20</td></tr>
+        <tr><td>Md Alif Ismail Udoy</td><td>Business Developer</td><td>Textile &amp; Apparel Merchandising; Entrepreneurship and Project Development</td><td class="code">2019</td></tr>
+        <tr><td>Nivedita Mojumder</td><td>MBA Student, Sharda University, Delhi</td><td>Entrepreneurship and Project Development</td><td class="code">~2019</td></tr>
+        <tr><td>Prachi Aditi</td><td>Classical Handmade Products BD Ltd.</td><td>Financial Management</td><td class="code">2019&ndash;21</td></tr>
+        <tr><td>Nazifa Musarrat</td><td>Garment Technologist, Marks &amp; Spencer</td><td>Entrepreneurship and Project Development</td><td class="code">2021</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>What they asked for more of</h3>
+    <p>The form also asked what would have strengthened the course, and the answers are consistent enough to be worth acting on: more case studies drawn from the textile industry, assignments that mirror real industrial problems, more practical laboratory work, and more real-life examples. One respondent asked for the implementation of AI. Those are the changes I would make first.</p>
+
+    <div class="note-strip">Full response data for all thirteen submissions, and respondents&rsquo; LinkedIn profiles, are available on request. Every respondent gave explicit written consent for their response to be used in professional application materials and on this site.</div>
   </section>
 
   <footer>
