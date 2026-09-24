@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Maeen Md Khairul Akter — PhD candidate in Technology, Policy and Innovation at Stony Brook University; solid waste characterization, circular economy, textile waste.">
+<meta name="description" content="Maeen Md Khairul Akter — textile and apparel engineering and management, circular economy, and solid waste characterization; PhD candidate, Stony Brook University.">
 <title>Maeen Md Khairul Akter</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -73,6 +73,30 @@ header.tab-head{margin-bottom:2rem;padding-bottom:1.4rem;border-bottom:2px solid
 .q .who .rl{font-size:.8rem;color:var(--muted);line-height:1.35}
 .q .crs{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.05em;color:var(--indigo);text-transform:uppercase;margin:0 0 .6rem}
 @media (max-width:860px){.quotes{grid-template-columns:1fr}}
+
+/* figures */
+.fig{margin:0}
+.fig img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+.fig figcaption{font-size:.8rem;color:var(--muted);line-height:1.45;margin-top:.5rem}
+.fig.wide{margin:1.2rem 0;max-width:760px}
+/* awards */
+.awards{margin:0 0 1rem}
+.aw{display:grid;grid-template-columns:120px minmax(0,1fr);gap:1.1rem;align-items:center;padding:.9rem 0;border-bottom:1px solid var(--line-soft);max-width:760px}
+.aw:last-child{border-bottom:0}
+.aw-logo{display:block;width:120px;height:54px;background-color:#fff;background-repeat:no-repeat;background-position:center;background-size:contain;border-radius:4px;border:1px solid var(--line-soft)}
+.aw-text{display:grid;place-items:center;font-family:"IBM Plex Mono",monospace;font-weight:600;color:#1A2236;font-size:.95rem;letter-spacing:.1em}
+.logo-swana{background-image:url(img/logo-swana.webp);background-size:86% auto}
+.logo-eref{background-image:url(img/logo-eref.webp);background-size:86% auto}
+.logo-nysaswm{background-image:url(img/logo-nysaswm.webp);background-size:auto 88%}
+.aw-t{font-weight:600;line-height:1.3}
+.aw-m{font-size:.86rem;color:var(--ink-2);margin-top:.1rem}
+.aw-n{font-size:.84rem;color:var(--muted);margin-top:.2rem;line-height:1.45}
+@media (max-width:860px){.aw{grid-template-columns:84px minmax(0,1fr)}.aw-logo{width:84px;height:40px}}
+/* photo row */
+.photos3{display:grid;grid-template-columns:1.3fr 1.3fr .75fr;gap:.6rem;margin:1rem 0 .4rem}
+.photos3 img{display:block;width:100%;height:230px;object-fit:cover;border-radius:6px}
+.caption{font-size:.8rem;color:var(--muted);margin:0 0 1.2rem}
+@media (max-width:860px){.photos3{grid-template-columns:1fr 1fr}.photos3 img{height:180px}.photos3 img:last-child{grid-column:span 2;object-position:center 30%}}
 
 /* components */
 .placeholder{border:1.5px dashed var(--ph-line);background:var(--ph-bg);color:var(--ph);border-radius:6px;padding:.75rem 1rem;font-size:.88rem;line-height:1.45;margin:0 0 1rem;max-width:68ch}
@@ -156,13 +180,16 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     <div class="brand">
       <span class="name">Maeen Md Khairul Akter</span>
       <span class="role">PhD Candidate, Technology, Policy &amp; Innovation<br>Department of Technology, AI and Society<br>Stony Brook University</span>
+      <span class="role" style="color:var(--indigo);margin-top:.35rem">Textile &amp; Apparel Engineering &middot; Circular Economy &middot; Waste Data Analysis</span>
     </div>
     <nav class="tabs" aria-label="Sections">
-      <a href="#about" data-tab="about"><span class="n">1</span>About me</a>
-      <a href="#teaching" data-tab="teaching"><span class="n">2</span>Teaching &amp; mentorship</a>
-      <a href="#research" data-tab="research"><span class="n">3</span>Research &amp; publications</a>
-      <a href="#other" data-tab="other"><span class="n">4</span>Other work of significance</a>
-      <a href="#testimonials" data-tab="testimonials"><span class="n">5</span>Student testimonials</a>
+      <a href="#about" data-tab="about"><span class="n">1</span>About Me</a>
+      <a href="#apparel" data-tab="apparel"><span class="n">2</span>Textile &amp; Apparel Engineering and Management</a>
+      <a href="#sustainability" data-tab="sustainability"><span class="n">3</span>Environmental Sustainability &amp; Circular Economy</a>
+      <a href="#waste" data-tab="waste"><span class="n">4</span>Waste Characterization &amp; Data Analysis</a>
+      <a href="#teaching" data-tab="teaching"><span class="n">5</span>Teaching &amp; Mentorship</a>
+      <a href="#testimonials" data-tab="testimonials"><span class="n">6</span>Student Testimonials</a>
+      <a href="#publications" data-tab="publications"><span class="n">7</span>Publications</a>
     </nav>
     <div class="links">
       <a href="mailto:maeen.mdkhairulakter@stonybrook.edu">Email</a>
@@ -170,7 +197,6 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <a href="https://www.linkedin.com/in/maeen-md-khairul-akter-a00b4750/">LinkedIn</a>
       <a href="https://wastedata.info/about-us/">Waste Data &amp; Analysis Center</a>
       <a href="Maeen_Md_Khairul_Akter_CV.pdf" download>CV (PDF)</a>
-      <a href="Maeen_Akter_Portfolio.pdf" download>Portfolio (PDF)</a>
     </div>
   </aside>
 
@@ -180,20 +206,17 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
   <section class="tab" id="tab-about" aria-labelledby="h-about">
     <header class="tab-head">
       <p class="eyebrow">About me</p>
-      <h1 id="h-about">Measuring waste so that policy can manage it.</h1>
+      <h1 id="h-about">Educator, Researcher, and Trade Editor in Textile and Apparel Engineering, Circular Economy, and Waste Data</h1>
     </header>
     <div class="about-top">
       <div>
-        <p class="lede">I am a textile engineer turned waste-systems researcher. I spent nine years teaching and building an engineering-management department in Dhaka; now I spend my days sorting, weighing and modelling municipal solid waste across New York State so that the people who write waste policy have numbers they can trust.</p>
+        <p class="lede">I work across three connected areas: the engineering and management of textile and apparel production, environmental sustainability and the circular economy in that industry, and the characterization and analysis of solid waste. The common thread is measurement &mdash; of where material goes, what is lost along the way, and what the resulting data can tell industry and policy.</p>
         <h4>Who I am</h4>
-        <p>I am a PhD candidate in Technology, Policy and Innovation in the <a href="https://www.stonybrook.edu/dtas/students/phd-current-cohort.html">Department of Technology, AI and Society</a> (formerly the Department of Technology and Society) at Stony Brook University, and a researcher at the <a href="https://wastedata.info">Waste Data and Analysis Center (WDAC)</a>. Before coming to the United States in 2022, I was an Assistant Professor of Textile Engineering Management at the Bangladesh University of Textiles (BUTEX), and before that a lecturer at the National Institute of Textile Engineering and Research (NITER). I started on a weaving floor as a production engineer at Envoy Textiles, which is where I first noticed how much material a factory throws away and how little anyone measured it.</p>
-        <h4>What I do</h4>
-        <p>My dissertation develops a multivariate, compositional-data framework for measuring and comparing municipal solid waste systems, so that jurisdictions can be compared as whole systems rather than one material at a time. The empirical base is the NYSDEC-funded statewide waste characterization program, where I design and run physical waste sorts and contribute to the technical reporting. In parallel I keep a research line on textile waste and the circular economy in Bangladesh: material flow analysis of pre-consumer waste, informal recycling networks, and consumer attitudes toward sustainable apparel.</p>
+        <p>I am a PhD candidate in Technology, Policy and Innovation in the <a href="https://www.stonybrook.edu/dtas/students/phd-current-cohort.html">Department of Technology, AI and Society</a> (formerly the Department of Technology and Society) at Stony Brook University, and a researcher at the <a href="https://wastedata.info">Waste Data and Analysis Center (WDAC)</a>. Before coming to the United States in 2022, I taught textile engineering in Bangladesh for eight years, most recently as Assistant Professor of Textile Engineering Management at the Bangladesh University of Textiles (BUTEX). I started on a weaving floor as a production officer at Envoy Textiles, which is where I first noticed how much material a factory throws away and how little anyone measured it.</p>
         <h4>What I like</h4>
         <p>When I am not working I like to spend time with my family and friends. As a father of three, I love playing with my children and taking them places. I find cooking therapeutic and travelling inspiring.</p>
         <h4>Where I am going</h4>
-        <p>My career goal is to become an interdisciplinary professor and researcher in the sustainable transformation of the textile and apparel industry. The PhD is how I am building the toolkit for that. Studying municipal solid waste as a system, rather than as a list of materials, has taught me how to measure material flows rigorously, how to compare jurisdictions and programs on equal terms, and how to turn sort data into evidence that a policymaker can act on.</p>
-        <p>Those are the questions the textile and apparel industry needs answered next: where its waste actually goes, which recovery routes are worth investing in, and how to design policy that works for a supply chain with a large informal sector. Because waste is generated at every stage of the value chain, from fibre to finished garment to end-of-life, the answers only hold together when the chain is treated as one system rather than a series of separate factories. I want to bring the measurement discipline of waste systems research back to the industry I came from, and to teach the next generation of engineers and managers to think that way from the start.</p>
+        <p>My aim is to bring the measurement methods of waste systems research to the textile and apparel value chain: to establish where the industry&rsquo;s waste actually goes, which recovery routes are worth investing in, and how policy can work in a supply chain with a large informal sector. Because waste arises at every stage, from fibre to finished garment to end-of-life, the answers hold together only when the chain is treated as one system. I want to do that work in research, policy or industry, and to train the engineers and managers who will carry it forward.</p>
       </div>
       <div>
         <img class="portrait-img" src="photo.jpg" alt="Maeen Md Khairul Akter">
@@ -202,10 +225,18 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <dt>Affiliation</dt><dd>Department of Technology, AI and Society, Stony Brook University</dd>
           <dt>Center</dt><dd>Waste Data and Analysis Center (WDAC)</dd>
           <dt>Expected</dt><dd>PhD, May 2027</dd>
-          <dt>Fields</dt><dd>Solid waste characterization, compositional data analysis, circular economy, textile waste, SDG 12</dd>
+          <dt>Fields</dt><dd>Textile and apparel engineering and management; circular economy; solid waste characterization; compositional data analysis</dd>
           <dt>Editor</dt><dd>Managing Editor, <i>Textile Focus</i> and <i>Denim Focus</i></dd>
+          <dt>Recognition</dt><dd>2026 EREF Scholar</dd>
         </dl>
       </div>
+    </div>
+
+    <h3>Three areas of work</h3>
+    <div class="grid-3">
+      <div class="card"><h4><a href="#apparel" data-tab="apparel">Textile and Apparel Engineering and Management</a></h4><p>Nine years in the Bangladesh sector as engineer, assistant professor, researcher and editor. Material stream mapping across the production chain, productivity and safety research across twenty-five garment factories, and Managing Editor of <i>Textile Focus</i> and <i>Denim Focus</i>.</p></div>
+      <div class="card"><h4><a href="#sustainability" data-tab="sustainability">Environmental Sustainability and Circular Economy</a></h4><p>Circularity of pre-consumer textile waste, the informal recovery market in the Mirpur cluster, a circular-economy model for SDG 12, and the NYSDEC report on recycling and the circular economy.</p></div>
+      <div class="card"><h4><a href="#waste" data-tab="waste">Waste Characterization and Data Analysis</a></h4><p>Statewide municipal solid waste characterization in New York at the Waste Data and Analysis Center, and a compositional-data framework for comparing whole waste systems. 2026 EREF Scholar.</p></div>
     </div>
 
     <h3>Education</h3>
@@ -219,6 +250,7 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     <ul class="timeline">
       <li><span class="when">Aug 2022 – present</span><span class="what">PhD Researcher, Solid Waste Characterization &amp; Policy</span><br><span class="where">Waste Data and Analysis Center, Stony Brook University</span></li>
       <li><span class="when">2018 – 2022</span><span class="what">Assistant Professor, Textile Engineering Management</span><br><span class="where">Bangladesh University of Textiles (BUTEX), Dhaka</span></li>
+      <li><span class="when">Nov 2020 – Dec 2022</span><span class="what">Research Assistant, NIPOSH</span><br><span class="where">Network to Integrate Productivity and Occupational Safety and Health improvements &mdash; Ahsanullah University of Science and Technology, University of Southern Denmark and BGMEA</span></li>
       <li><span class="when">2016 – present</span><span class="what">Managing Editor</span><br><span class="where"><i>Textile Focus</i> (and later <i>Denim Focus</i>), Dhaka</span></li>
       <li><span class="when">2014 – 2018</span><span class="what">Lecturer, Textile Engineering Management</span><br><span class="where">National Institute of Textile Engineering and Research (NITER), Savar</span></li>
       <li><span class="when">2013 – 2014</span><span class="what">Production Officer, Weaving</span><br><span class="where">Envoy Textiles Limited</span></li>
@@ -226,20 +258,220 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     </ul>
   </section>
 
-  <!-- ===================== 2. TEACHING ===================== -->
+  <!-- ===================== 2. TEXTILE & APPAREL ===================== -->
+  <section class="tab" id="tab-apparel" aria-labelledby="h-apparel">
+    <header class="tab-head">
+      <p class="eyebrow">Textile and apparel engineering and management</p>
+      <h1 id="h-apparel">Supporting Sustainable Transformation of the Textile and Apparel Industry</h1>
+    </header>
+    <p class="lede">Nine years inside Bangladesh&rsquo;s textile and apparel sector, on the production side of the value chain: measuring material and labour flows through factories, testing whether productivity and worker safety move together, and translating both for an industry readership.</p>
+    <div class="note-strip">Engaged in the sector in different capacities: engineer, assistant professor, researcher and editor.</div>
+
+    <h3>Material flow in apparel manufacturing</h3>
+    <p>A knit garment enters a factory as a roll of fabric and leaves as a carton, and somewhere between the two a fifth of the material stops being product. Bangladesh&rsquo;s apparel industry reports its performance in export dollars and its waste in truckloads, neither of which tells a manufacturer where material is actually lost. I mapped the material stream through knitwear factories in mass units &mdash; fabric in at the store, panels out of cutting, garments out of sewing, cartons at export &mdash; computing a conversion rate at each transition rather than a single plant-level figure. Extended across the whole production chain &mdash; from fibre through spinning, fabric manufacturing and wet processing to the finished garment &mdash; the same method gives a total conversion rate of 77 per cent.</p>
+    <figure class="fig wide" style="max-width:720px">
+      <img src="img/material-stream-map.webp" alt="Material stream map of the textile and apparel production chain from fibre to apparel, showing stage conversion rates of 89, 81, 91 and 80 per cent, a total conversion rate of 77 per cent, average consumption and waste per stage, excess inventory, and value addition totalling 126 per cent">
+      <figcaption>Material stream map (MSM) of textile-apparel production chain. Source: Akter, Haq, Islam &amp; Uddin (2022), <i>Cleaner Environmental Systems</i>, 4: 100070, <a href="https://doi.org/10.1016/j.cesys.2022.100070">doi:10.1016/j.cesys.2022.100070</a>.</figcaption>
+    </figure>
+    <p>The mapping shows that cutting is where the loss concentrates. The store and sewing transitions each retain between 97 and 99 per cent of incoming mass; the cutting room retains 80 to 82 per cent, which accounts for nearly all of the gap between fabric purchased and garment shipped. It is also the stage whose output is cleanest and most homogeneous, which makes it the realistic entry point for fibre recovery rather than the post-consumer stream that attracts most policy attention. The measurement itself is ordinary industrial engineering done carefully: standardised units, a defined boundary at each stage, and reconciliation of store records against floor weighing.</p>
+    <p>The work was published in <i>Cleaner Environmental Systems</i> in 2022 (<a href="https://doi.org/10.1016/j.cesys.2022.100070">doi:10.1016/j.cesys.2022.100070</a>) and was covered by <i>Textile Today</i> under the headline <a href="https://www.textiletoday.com.bd/0-70-lost-every-piece-apparel-export">&ldquo;$0.70 is lost for every piece of apparel export&rdquo;</a>. A per-piece figure travels further in a merchandising office than a conversion rate does.</p>
+
+    <h3>Productivity and occupational safety on the sewing floor</h3>
+    <p>As Research Assistant on NIPOSH &mdash; the Network to Integrate Productivity and Occupational Safety and Health improvements &mdash; I worked across a network of twenty-five Bangladeshi garment factories built with Ahsanullah University of Science and Technology, the University of Southern Denmark and the Bangladesh Garment Manufacturers and Exporters Association. The project extended the earlier POSH work led by Professor Peter Hasle, and tested a proposition the industry tends to resist: that productivity and worker safety improve together rather than at each other&rsquo;s expense.</p>
+    <p>My work covered scientific writing, training material and documentation, assessment of factory performance, data analysis and quarterly reporting to the project leadership and BGMEA, and concept development for publications out of the project. The training combined work study &mdash; with occupational health and safety built into the analysis of work method and workstation alignment rather than added afterwards &mdash; with production line balancing taught through spreadsheet simulation, so that factory staff could locate their own bottlenecks.</p>
+    <p>The results were mixed and were reported as such. At the second quarterly report the network&rsquo;s mean efficiency gain was three per cent: four factories had gained more than ten per cent and seven more than five, while seven had gone backwards and four had stopped reporting. The delta variant and the shutdowns from July 2021 pushed most of the network online, and the online meetings proved markedly less effective than meeting face to face.</p>
+
+    <h3>Industry engagement and trade editing</h3>
+    <div class="feature">
+      <div>
+        <p><b>Managing Editor, <a href="https://textilefocus.com"><i>Textile Focus</i></a> and <a href="https://denimfocus.net"><i>Denim Focus</i></a></b></p>
+        <p>I have edited two internationally circulated textile and apparel business magazines published from Dhaka, commissioning and editing technical articles on trade, technology and innovation in the sector, and writing more than a hundred of my own. The work keeps me close to what mills and brands are actually doing, which is where most of my research questions come from: the material stream mapping above began as an argument with a factory manager about how much fabric his cutting room was losing.</p>
+        <p>Earlier I was part of the technical team at <i>Bangladesh Textile Today</i> (2011&ndash;2015), starting as a student research assistant.</p>
+        <p>I also conduct <i>Focus Talk</i>, a webinar series that puts manufacturers, technology suppliers and academics on one panel. The fifth episode, on automation and digitalisation in the textile industry, was <a href="https://www.dhakatribune.com/business/263671/dialogue-on-automation-and-digitalization-in">reported by the <i>Dhaka Tribune</i></a> in February 2022; <a href="https://www.youtube.com/watch?v=ibJwxhazza8">recordings</a> remain online.</p>
+        <p>The magazines also run an Industry Associate program, through which manufacturers such as <a href="https://textilefocus.com/robintex-group-join-hands-textile-focus-promote-industry-best-practices/">Robintex Group</a> and <a href="https://textilefocus.com/nz-fabrics-ltd/">NZ Fabrics Ltd.</a> share and promote good factory practice with the wider industry. For each feature the editorial team visits the factory and documents its production, quality control, R&amp;D and effluent treatment practice.</p>
+        <h4>Selected articles</h4>
+        <ul class="plain">
+          <li><a href="https://textilefocus.com/bangladesh-loses-its-2nd-position-to-vietnam-the-third-place-is-a-warning-not-a-statistic/">Bangladesh loses its 2nd position to Vietnam: the third place is a warning, not a statistic</a> &mdash; <i>Textile Focus</i>, July 2026. Why the slip in global garment export rankings reflects structural disadvantage rather than a cyclical dip.</li>
+          <li><a href="https://textilefocus.com/a-new-year-a-new-government-and-a-new-deal-with-usa%C2%BE-infliction-points-for-bangladesh-textile-and-apparel-industry/">A new year, a new government, and a new deal with USA: inflection points for Bangladesh textile and apparel industry</a> &mdash; <i>Textile Focus</i>, March 2026. The opportunities and the implementation risks in a new government and a reciprocal tariff arrangement tied to American cotton.</li>
+          <li><a href="https://textilefocus.com/sustainability-textile-industry-reality-challenges/">Sustainability in textile industry: reality and challenges</a> &mdash; <i>Textile Focus</i>, February 2019. Why the Bangladesh textile industry has to adopt sustainable practice without losing competitiveness, and the case for strengthening domestic textile production to reduce import dependence.</li>
+          <li><a href="https://textilefocus.com/engineering-management-industrial-engineering-textile-apparel-professionals/">Engineering management and industrial engineering for textile and apparel professionals</a> &mdash; <i>Textile Focus</i>, January 2019. The case for building engineering-management and industrial-engineering capacity among textile and apparel professionals facing rising costs, compliance demands and the trade-off between quality and profitability.</li>
+        </ul>
+      </div>
+      <figure class="fig">
+        <img src="img/textile-focus-cover.webp" alt="Cover of Textile Focus, November&ndash;December 2024, an issue on the circular economy in textiles">
+        <figcaption><i>Textile Focus</i>, November&ndash;December 2024, an issue built around the circular economy in textiles.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Industry skills training</h3>
+    <ul class="plain">
+      <li><b>SEIP certified trainer and assessor</b> &mdash; Skills for Employment Investment Program, Ministry of Finance, Government of Bangladesh, implemented by BTMA. Taught Lectra Garments CAD &mdash; computer-aided pattern making, grading and marker planning &mdash; and merchandising batches, and served as external assessor for SEIP training batches.</li>
+      <li><b>Factory-floor training</b> &mdash; between 2015 and 2018 trained workers across spinning, weaving, knitting and apparel production facilities under the same government program. Teaching a marker-planning session to an operator with ten years on the floor and to a second-year undergraduate are different jobs; doing both taught me more about pedagogy than the pedagogy training did.</li>
+      <li><b>NITER SEIP team</b> &mdash; Trainer and Assessor in the NITER SEIP program, 2016&ndash;2020, and involved in its planning, class scheduling and operational policy.</li>
+    </ul>
+
+    <h3>Technology transfer and industry-facing projects</h3>
+    <ul class="plain">
+      <li><b>HEQEP proposal: Technology Transfer Office for the textile and apparel sector</b> &mdash; developed the complete proposal as Deputy Sub-Project Manager under the Higher Education Quality Enhancement Project, covering the case for the office, its staffing and its route to financial self-sufficiency.</li>
+      <li><b>Intellectual property</b> &mdash; prepared and delivered a talk on intellectual property in textiles for IP Day 2019.</li>
+      <li><b>NITER Business Club</b> &mdash; helped found a student business club at NITER.</li>
+    </ul>
+
+    <h3>Early industry work</h3>
+    <p>I began on a weaving floor as a production officer at Envoy Textiles in 2013, which is where I first noticed how much material a factory throws away and how little anyone measured it. Two papers came out of that period:</p>
+    <div class="pub"><div class="yr">2015</div><div><div class="t">Analysis of the factors affecting the lead time for export of readymade apparels from Bangladesh; proposal for strategic reduction of lead time</div><div class="m">Kader, S., &amp; Akter, M. M. K. &mdash; <i>European Scientific Journal</i>, 10(33)</div></div></div>
+    <div class="pub"><div class="yr">2015</div><div><div class="t">Development of different denim effect on knitted fabric and comparative analysis on the basis of physical and dimensional properties</div><div class="m">Didar, S. A., Patwary, S. U., Kader, S., Akter, M. M. K., &amp; Ahmed, T. &mdash; <i>Research Journal of Engineering Sciences</i>, 4(4), 9&ndash;15</div></div></div>
+
+    <h3>Teaching in this field</h3>
+    <p>I taught seventeen distinct courses across two institutions between 2014 and 2022, among them Textile and Apparel Merchandising, Industrial Management and Quality Management. The full account &mdash; courses, curriculum development, laboratory and supervision &mdash; is in <a href="#teaching" data-tab="teaching">Teaching and mentorship</a>.</p>
+  </section>
+
+  <!-- ===================== 3. SUSTAINABILITY ===================== -->
+  <section class="tab" id="tab-sustainability" aria-labelledby="h-sustainability">
+    <header class="tab-head">
+      <p class="eyebrow">Environmental sustainability and circular economy</p>
+      <h1 id="h-sustainability">Material Circularity in the Textile and Apparel Value Chain</h1>
+    </header>
+    <p class="lede">Having measured where material is lost in manufacturing, the next question is where it goes. Bangladesh already has a recovery economy for cutting waste; it is simply informal, undocumented and invisible to policy. This line of work maps it, values it, and asks what a formal circular system would have to improve on.</p>
+
+    <h3>Circularity of pre-consumer textile waste</h3>
+    <p>The cutting-room waste that leaves a knitwear factory in Dhaka does not go to landfill. It is bought, sorted by colour and fibre, and moved through a dense chain of traders, shredders and spinners. Documenting that chain matters for two reasons: it establishes a baseline against which any formal extended producer responsibility scheme would be measured, and it shows which recovery routes are already economic and which are not.</p>
+    <p><b>Material circularity of pre-consumer textile solid waste: learning from Bangladesh</b> &mdash; <i>PLOS Sustainability &amp; Transformation</i>, 2025, 4(4): e0000168, <a href="https://doi.org/10.1371/journal.pstr.0000168">doi:10.1371/journal.pstr.0000168</a>. First author. Quantifies material circularity for pre-consumer waste and identifies the recovery pathways that are already functioning.</p>
+    <figure class="fig wide" style="max-width:520px">
+      <img src="img/circularity-flow.webp" alt="Flow diagram of textile solid waste: waste is collected, sorted, stored and classified, then routed to reuse cases or to recycling; remnants return to sorting or go to non-textile uses such as boiler fuel and road construction until the material is exhausted">
+      <figcaption>Textile solid waste material circularity flow diagram. Source: Akter et al. (2025), <i>PLOS Sustainability &amp; Transformation</i>, 4(4): e0000168, <a href="https://doi.org/10.1371/journal.pstr.0000168">doi:10.1371/journal.pstr.0000168</a>.</figcaption>
+    </figure>
+
+    <h3>The informal end-market: the Mirpur cluster</h3>
+    <p>Much of the recovery trade is concentrated in the Mirpur cluster of Dhaka. Fieldwork there documented the traders and processors who constitute the end-market, and the price signals that govern what is recovered and what is not &mdash; an existing circular system operating at scale without a single policy instrument directed at it.</p>
+    <p><b>Textile solid waste end-market in the circular economy: the Mirpur cluster in Bangladesh</b> &mdash; <i>Journal of Advanced Manufacturing and Processing</i>, 2025, <a href="https://doi.org/10.1002/amp2.70007">doi:10.1002/amp2.70007</a>. Co-author.</p>
+
+    <h3>A conceptual model for SDG 12</h3>
+    <p>The factory measurement described under <a href="#apparel" data-tab="apparel">textile and apparel engineering</a> was built into a circular-economy model for the sector, framed against Sustainable Development Goal 12 on responsible consumption and production. The argument is that material recovery in an apparel economy has to be designed around the stage that actually generates clean, homogeneous waste, rather than around the post-consumer stream that attracts most attention.</p>
+    <figure class="fig wide" style="max-width:811px">
+      <img src="img/sdg12-model.webp" alt="Conceptual model linking SDG 12 targets 12.2 and 12.5 through a circular loop of raw materials, processing, retail, waste collection and recycling, with a strategic approach, key strategic indicators and key performance indicators for resource productivity and waste production">
+      <figcaption>Circular economy-led conceptual model for waste management in the textiles and apparel industry to achieve SDG 12. Source: Akter, Haq, Islam &amp; Uddin (2022), <i>Cleaner Environmental Systems</i>, 4: 100070, <a href="https://doi.org/10.1016/j.cesys.2022.100070">doi:10.1016/j.cesys.2022.100070</a>.</figcaption>
+    </figure>
+
+    <h3>Consumer willingness to pay</h3>
+    <p>In collaboration with researchers at the University of North Carolina at Greensboro we surveyed more than four hundred young Bangladeshi consumers on sustainable apparel, published in the <i>Social Responsibility Journal</i> in 2023 (<a href="https://doi.org/10.1108/SRJ-01-2022-0035">doi:10.1108/SRJ-01-2022-0035</a>). I designed and ran the data collection on the ground. The finding that matters is the gap between stated preference and purchase behaviour in a market where the garments are manufactured locally and sold at a premium abroad: a sustainability claim is a market claim before it is an engineering one.</p>
+
+    <h3>Recycling and the circular economy in municipal systems</h3>
+    <p>The same question asked of a state waste system rather than a value chain. I am lead author of the <b>Recycling and the Circular Economy</b> report (NYSDEC Task 4, 2025), produced at the Waste Data and Analysis Center and commissioned by the New York State Department of Environmental Conservation. The measurement methods behind it are described under <a href="#waste" data-tab="waste">waste characterization and data analysis</a>.</p>
+
+    <h3>Book chapters</h3>
+    <div class="pub"><div class="yr">2023</div><div><div class="t">Sustainable development and circular economy</div><div class="m">Akter, M. M. K., Haq, U. N., &amp; Uddin, M. A. &mdash; in <i>Waste Management in the Circular Economy</i>, Springer, pp. 133&ndash;152. <a href="https://doi.org/10.1007/978-3-031-42426-7_7">doi:10.1007/978-3-031-42426-7_7</a></div></div></div>
+    <div class="pub"><div class="yr">2024</div><div><div class="t">Recycling practices of pre-consumer waste generated from textile industry</div><div class="m">Azad, A. K., Haq, U. N., Akter, M. M. K., &amp; Uddin, M. A. &mdash; in <i>Sustainable Manufacturing Practices in Textiles and Fashion</i>, Springer. <a href="https://doi.org/10.1007/978-3-031-51362-6_12">doi:10.1007/978-3-031-51362-6_12</a></div></div></div>
+
+    <h3>Presented at</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>When</th><th>Title</th><th>Venue</th></tr></thead>
+      <tbody>
+        <tr><td class="code">Jun 2024</td><td>Circular economy in a complex production supply chain: case from the textile industry</td><td>A&amp;WMA Annual Conference, Calgary</td></tr>
+        <tr><td class="code">Apr 2024</td><td>Material circularity of pre-consumer textile solid waste</td><td>REMADE Circular Economy Tech Summit, Washington DC</td></tr>
+        <tr><td class="code">Feb 2024</td><td>Textile solid waste recycling: a circular economy approach</td><td>Global Waste Management Symposium, California</td></tr>
+        <tr><td class="code">Jun 2023</td><td>Textile solid waste recycling: a circular economy approach</td><td>A&amp;WMA Annual Conference, Orlando</td></tr>
+        <tr><td class="code">2021</td><td>Bangladeshi young consumers and sustainable apparel</td><td>ITAA Annual Conference</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Peer review</h3>
+    <p>I review manuscripts for <i>PLOS Sustainability &amp; Transformation</i> and for the <i>International Journal of Innovation and Technology Management</i>.</p>
+  </section>
+
+  <!-- ===================== 4. WASTE CHARACTERIZATION ===================== -->
+  <section class="tab" id="tab-waste" aria-labelledby="h-waste">
+    <header class="tab-head">
+      <p class="eyebrow">Waste characterization and data analysis</p>
+      <h1 id="h-waste">Measuring Municipal Solid Waste So That Systems Can Be Compared</h1>
+    </header>
+    <p class="lede">Physical waste sorts across New York State, and a multivariate framework for comparing what they produce. The argument running through the work is that the analytical form of waste data is not neutral: the way a waste stream is measured decides which policy questions can be asked of it.</p>
+
+    <h3>The New York State characterization program</h3>
+    <p>At the <a href="https://wastedata.info">Waste Data and Analysis Center</a> at Stony Brook University I design and run municipal solid waste characterization studies across New York State, from sampling design and field data collection through compositional analysis and technical reporting. The program is funded by the New York State Environmental Protection Fund and commissioned by the Department of Environmental Conservation, and runs in two phases, 2019&ndash;2024 and 2024&ndash;2029, sampling municipal solid waste and recyclables at sites across the state.</p>
+    <p>The 2023 field season alone ran from February to October and covered towns, counties and regional authorities from Smithtown, Brookhaven, Islip, Oyster Bay and Southold on Long Island to Westchester, Ulster, Otsego, Madison, Chenango, Delaware, Jefferson, Chautauqua, Niagara, the Oneida-Herkimer Solid Waste Authority and the Development Authority of the North Country. Long Island sites were sampled as day trips from the Stony Brook campus; upstate sites as week-long expeditions with the team staying locally. Each sample is hand-sorted into 72 material categories and weighed.</p>
+    <p>A characterization study is only as good as the discipline of its field protocol: sampling plans that survive contact with a tipping floor, category definitions that hold across every crew on every shift, and reconciliation of sorted mass against scale records. Most of the analytical value is preserved or lost there rather than later.</p>
+
+    <h3>The problem with reporting one material at a time</h3>
+    <p>Waste governance in the United States is hierarchical. Composition data are generated at the operational level &mdash; haulers, recovery facilities, municipal programs &mdash; and aggregated upward through counties and state agencies to federal reporting. Analytical conventions applied at the point of measurement therefore propagate through the whole system. Characterization studies conventionally report each material as an independent percentage, and that form is retained in aggregated datasets, regulatory reporting and policy analysis.</p>
+    <p>The difficulty is that waste is a compositional system. Material fractions are interdependent and constrained to sum to one hundred, so a change in one necessarily shifts the others, and meaningful patterns arise from how materials co-occur rather than from their individual magnitudes. Comparing two counties on their paper fraction alone can mislead, because a change in the paper percentage may reflect nothing about paper at all. The same constraint limits machine-learning approaches to waste prediction and sorting optimization, which can only learn the structure their input data preserve.</p>
+
+    <h3>A multivariate compositional framework</h3>
+    <div class="card" style="max-width:none">
+        <p><b>Measuring and Comparing Municipal Solid Waste Systems in the United States: Multivariate Evidence for Policy Design and Evaluation</b> &mdash; doctoral dissertation, expected May 2027. Advisors: David Tonjes and Elizabeth Hewitt.</p>
+        <p>The framework draws on compositional data analysis. An isometric log-ratio transformation removes the closure constraint; Euclidean distance in the transformed space then gives a single comparable measure of dissimilarity for any pair of characterization profiles; and hierarchical cluster analysis on the resulting distance matrix reveals structure without assuming the number or shape of groups. Cluster stability is tested by bootstrap resampling.</p>
+        <p>It is demonstrated on 27 datasets: nineteen New York jurisdictions from the state program and eight reference studies, including EPA national data, the NYSDEC urban, suburban and rural profiles, and statewide studies from Pennsylvania, Wisconsin and California. The 72 field categories are harmonized to 16 for analysis, a format characterization contractors already produce, so the method needs no new field protocol.</p>
+    </div>
+    <figure class="fig wide" style="max-width:640px">
+      <img src="img/heatmap.webp" alt="Heatmap of pairwise compositional distances among 27 waste characterization datasets, with red and orange triangles along the diagonal marking three groups of similar jurisdictions">
+      <figcaption>Pairwise distances among the 27 datasets in log-ratio space. Red and orange triangles along the diagonal mark groups of compositionally similar jurisdictions.</figcaption>
+    </figure>
+
+    <h3>Three types of waste system, three policy signals</h3>
+    <p>The analysis resolves the New York jurisdictions into three structurally distinct types, each read through log-ratio balances of policy-relevant material groups rather than through individual percentages.</p>
+    <div class="grid-3">
+      <div class="card"><h4>Balanced mixed systems</h4><p>The reference profiles. Organics and packaging roughly equal, fibre four times more prevalent than containers, the lowest residual burden in the dataset. The signal is optimization rather than crisis: paper recycling as the primary recovery pathway, with targeted rather than mandatory organics diversion.</p></div>
+      <div class="card"><h4>Organics-dominant systems</h4><p>Long Island towns and suburban Niagara. Organics about twice packaging, residuals four times recyclables. The clearest single-program signal in the dataset: organics collection and processing infrastructure, where a composting program moves the most tonnage per dollar invested.</p></div>
+      <div class="card"><h4>Residual-heavy mixed systems</h4><p>Rural upstate jurisdictions, some Long Island towns, New York City and Wisconsin. Organics-heavy but also carrying high plastic and non-recyclable fractions. A dual signal: organics composting and extended producer responsibility for hard-to-recycle packaging together, since neither works alone.</p></div>
+    </div>
+    <figure class="fig wide">
+      <img src="img/dendro-k6.webp" alt="Dendrogram of the 27 waste characterization datasets with six coloured boxes marking the six-cluster solution: the reference profiles; Niagara and Long Island towns; Bethlehem and Jefferson; Chenango and Cortland; Delaware, Madison, DANC, Otsego, Smithtown, NYC, Southold and Westchester; and California, Ulster, Wisconsin, Chautauqua and OHSWA">
+      <figcaption>Dendrogram showing the six-cluster (k = 6) hierarchical clustering solution for the 27 datasets. Jurisdictions joined at lower heights are more similar in composition; the three policy types above each combine one or more of these clusters.</figcaption>
+    </figure>
+    <p style="font-size:.9rem;color:var(--ink-2)">The classification is compositional: it describes what is in the waste stream, not how well existing programs perform. A high organic fraction may reflect food waste generation or an inefficient separate-collection program, so policy design should read the cluster profile alongside a diagnostic of the programs already in place.</p>
+
+    <h3>Residential versus commercial waste</h3>
+    <p>The final part of the dissertation applies the framework to a question the univariate convention cannot answer: are residential and commercial waste streams the same kind of system? California&rsquo;s SB&nbsp;1383, New York&rsquo;s organics requirements and state packaging EPR laws apply to both generator types, yet programs are usually calibrated on residential data because commercial studies are rarer. If the two streams are structurally similar, integrated programs are justified; if not, source-specific designs are needed.</p>
+    <p>The dataset draws on source-separated studies from multiple states in the Waste Data and Analysis Center repository &mdash; currently around forty residential-only and forty commercial-only observations spanning roughly twenty-five years. Observations are grouped into three time bands so that the comparison can test whether the gap between stream types is larger than the compositional drift within each stream over time. This part of the work is supported by a 2026 <a href="https://erefdn.org/scholar/maeen-md-khairul-akter/">EREF Scholar</a> award.</p>
+
+    <h3>Reports and manuscripts</h3>
+    <div class="pub"><div class="yr">2026</div><div><div class="t">Municipal solid waste composition in a multivariate context: a case study using New York State 2023 sort data</div><div class="m">Akter, M. M. K., Tonjes, D. J., Firmansyah, F., Wang, Y., Thyberg, K. L., &amp; Hewitt, E. &mdash; <i>under review</i></div><div class="note">First author</div></div></div>
+    <div class="pub"><div class="yr">2023&ndash;24</div><div><div class="t">MSW waste characterization reports: Madison County and the Development Authority of the North Country</div><div class="m">Akter, M. M. K., Firmansyah, F., Thyberg, K., &amp; Hewitt, E. &mdash; Waste Data and Analysis Center; commissioned by NYSDEC</div><div class="note">Lead author, Task 1 deliverables</div></div></div>
+    <p style="font-size:.88rem;color:var(--ink-2)">The Task 4 report on recycling and the circular economy is described under <a href="#sustainability" data-tab="sustainability">environmental sustainability and circular economy</a>.</p>
+
+    <h3>Methods and tools</h3>
+    <div class="grid-3">
+      <div class="card"><h4>Waste characterization</h4><p>Physical waste sorting and field sampling design; 72-category sorting protocol and harmonization; waste fraction quantification and validation; material stream mapping; landfill and diversion metrics.</p></div>
+      <div class="card"><h4>Quantitative</h4><p>R; compositional data analysis (ILR transformation, Aitchison and Euclidean distance); hierarchical clustering with bootstrap validation; PCA; data visualization (heatmaps, dendrograms); survey design and analysis at n greater than 400.</p></div>
+      <div class="card"><h4>Policy and reporting</h4><p>Government technical reporting for NYSDEC; organics diversion, circular economy and EPR policy analysis.</p></div>
+    </div>
+
+    <h3>Carrying the method across</h3>
+    <p>Textile waste research reports fractions the same way municipal waste research does, and inherits the same problem: a recovery rate for cutting waste means little without knowing what else moved in the stream. So far as I am aware these compositional techniques are not yet used in textile waste work, and bringing them across is the research line I most want to build next. It is the hinge between this work and the <a href="#sustainability" data-tab="sustainability">circularity research</a>.</p>
+
+    <h3>Presented at</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>When</th><th>Title</th><th>Venue</th></tr></thead>
+      <tbody>
+        <tr><td class="code">May 2026</td><td>Measurement and comparison of municipal solid waste jurisdictions with a multivariate approach</td><td>Federation of NY Solid Waste Management Associations, Lake George, NY</td></tr>
+        <tr><td class="code">May 2026</td><td>Multivariate analysis of waste composition data: how does it help policy design?</td><td>PhD Workshop in Climate &amp; Energy Decision Making, Carnegie Mellon University, Pittsburgh</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Scholarships</h3>
+    <div class="awards">
+      <div class="aw"><span class="aw-logo logo-eref" role="img" aria-label="Environmental Research &amp; Education Foundation logo"></span><div><div class="aw-t">EREF Scholar</div><div class="aw-m">Environmental Research &amp; Education Foundation (EREF) &middot; 2026</div><div class="aw-n">For the multi-state comparison of residential and commercial waste composition. <a href="https://erefdn.org/scholar/maeen-md-khairul-akter/">Scholar profile</a></div></div></div>
+      <div class="aw"><span class="aw-logo logo-swana" role="img" aria-label="Solid Waste Association of North America logo"></span><div><div class="aw-t">Robert Stearns Graduate Scholarship</div><div class="aw-m">Solid Waste Association of North America (SWANA) &middot; June 2026</div><div class="aw-n">For accomplishments, leadership potential, and commitment to advancing solid waste management and environmental sustainability.</div></div></div>
+      <div class="aw"><span class="aw-logo logo-nysaswm" role="img" aria-label="New York State Association for Solid Waste Management logo"></span><div><div class="aw-t">Christiansen-Roller-White-Miles Founder&rsquo;s Scholarship</div><div class="aw-m">New York State Association for Solid Waste Management (NYSASWM) &middot; June 2026</div><div class="aw-n">For academic achievement, leadership qualities and future goals.</div></div></div>
+      <div class="aw"><span class="aw-logo aw-text" aria-hidden="true">ASME</span><div><div class="aw-t">Floyd Hasselriis Educational Support, 2022&ndash;2023</div><div class="aw-m">ASME Materials &amp; Energy Recovery Division &middot; October 2023</div><div class="aw-n">For academic achievement and research in material recovery and recycling.</div></div></div>
+      <div class="aw"><span class="aw-logo logo-swana" role="img" aria-label="Solid Waste Association of North America logo"></span><div><div class="aw-t">Robert Stearns Graduate Scholarship</div><div class="aw-m">Solid Waste Association of North America (SWANA) &middot; 2023</div><div class="aw-n">For academic achievement and research in material recovery and recycling.</div></div></div>
+      <div class="aw"><span class="aw-logo logo-nysaswm" role="img" aria-label="New York State Association for Solid Waste Management logo"></span><div><div class="aw-t">Christiansen-Roller-White-Miles Founder&rsquo;s Scholarship</div><div class="aw-m">New York State Association for Solid Waste Management (NYSASWM) &middot; 2023</div><div class="aw-n">For commitment to advancing solid waste management solutions. <a href="https://wastedata.info/congratulations-to-maeen-sagarika-sera-for-winning-scholarships/">Announcement</a></div></div></div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. TEACHING ===================== -->
   <section class="tab" id="tab-teaching" aria-labelledby="h-teaching">
     <header class="tab-head">
       <p class="eyebrow">Teaching &amp; mentorship</p>
-      <h1 id="h-teaching">Nine years in the classroom, and a department built alongside it.</h1>
+      <h1 id="h-teaching">Nine Years in the Classroom, and a Department Built Alongside It</h1>
     </header>
-    <p class="lede">Between 2014 and 2022 I taught management, economics, law and product-development courses to textile engineering undergraduates and MBA students in Bangladesh, and took on the unglamorous work that makes a young department function: outcome-based curricula, accreditation self-assessment, a lab, and a student innovation fair.</p>
+    <p class="lede">Between 2014 and 2022 I taught courses including Industrial Management, International Marketing of Textile and Apparel, Entrepreneurship and Project Development, and Environment and Pollution Control to textile engineering undergraduates and MBA students in Bangladesh, and took on the unglamorous work that makes a young department function: outcome-based curricula, accreditation self-assessment, a lab, and a student innovation fair.</p>
     <div class="stats">
       <div class="stat"><b>8+</b><span>years of classroom teaching</span></div>
       <div class="stat"><b>17</b><span>distinct courses taught</span></div>
       <div class="stat"><b>3</b><span>undergraduate batches supervised (41st–43rd)</span></div>
       <div class="stat"><b>21</b><span>student projects at the 2019 Idea &amp; Innovation Fair</span></div>
     </div>
-    <div class="placeholder">Add total students taught if you have a defensible figure.</div>
 
     <h3>Teaching philosophy</h3>
     <p>I left a denim mill to teach because I wanted students to fall in love with the textile and apparel industry the way I had. Passion comes first; competence follows it.</p>
@@ -309,28 +541,32 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
         <p>At NITER, worked on the B.Sc. in Textile Engineering syllabus alignment with BUTEX and on new assessment guidelines.</p>
       </div>
     </div>
-    <div class="placeholder">IQAC roles and dates still to add: the committee roles you held (member, coordinator, focal person), the year the OBE curriculum was approved, and your role at NITER.</div>
 
     <h3>Idea &amp; Innovation Fair 2019</h3>
-    <div class="feature">
-      <div>
-        <p class="eyebrow">6 May 2019 · BUTEX Auditorium · with BEST Corporation</p>
-        <p>I led the organising of this one-of-a-kind science fair for textile and apparel engineering students, to give them a stage for their creativity, their innovations and their own projects. The concept note set three objectives: a platform for students' own ideas, a screen to find the strongest for industry funding toward commercialisation, and a way to make innovative activity ordinary rather than exceptional. Twenty-one teams registered, from across every BUTEX department.</p>
-        <p>Projects were scored out of one hundred on originality (40), future potential (40) and presentation or demonstration (20). The weighting was deliberate: presentation counted, because an idea nobody can follow is not yet an idea, but eighty marks went to whether the thing was new and whether it could go anywhere, so a rough prototype could beat a polished poster.</p>
-        <p>Projects included a compostable bag made from sweet-potato starch, smart apparel for visually impaired users, a sensor-driven dustbin, a semi-automated azo-dye reaction vessel, an app-based caretaker service for the elderly, intelligent protective clothing for firefighters, and an online open market for farmers.</p>
-        <div class="placeholder">Who judged, what the winners received, and whether any project went on to funding or a startup.</div>
-      </div>
-      <div class="photo wide">Fair-day photo: students at a prototype table or the poster wall. A second photo of the winners with certificates would work well.</div>
+    <p class="eyebrow">6 May 2019 &middot; BUTEX Auditorium &middot; sponsored by Best Corporation &middot; media partner <i>Textile Focus</i></p>
+    <p>I coordinated this science fair for textile and apparel engineering students, organised by the Department of Textile Engineering Management to give students a stage for their creativity, their innovations and their own projects, and delivered the keynote on the importance of innovation for the development of the textile industry. The concept note set three objectives: a platform for students&rsquo; own ideas, a screen to find the strongest for industry funding toward commercialisation, and a way to make innovative activity ordinary rather than exceptional. Twenty-one projects from across the university&rsquo;s departments were shown in two categories, prototype and poster presentation. The Vice-Chancellor, Professor Md. Abul Kashem, attended as chief guest.</p>
+    <div class="photos3">
+      <img src="img/fair-team.webp" alt="A student team explaining their project to a visitor at their table, with a laptop and posters">
+      <img src="img/fair-judging.webp" alt="Judges with score sheets examining a prototype bag and sweet-potato starch samples at a student table">
+      <img src="img/fair-keynote.webp" alt="Maeen Md Khairul Akter delivering the keynote from the podium">
     </div>
+    <p class="caption">The fair in progress: a team presenting its project; judges scoring the starch-based bag prototype against its raw materials; my keynote on innovation for the development of the textile industry.</p>
+    <p>Projects were scored out of one hundred on originality (40), future potential (40) and presentation or demonstration (20). The weighting was deliberate: presentation counted, because an idea nobody can follow is not yet an idea, but eighty marks went to whether the thing was new and whether it could go anywhere, so a rough prototype could beat a polished poster.</p>
+    <p>Projects included a compostable bag made from sweet-potato starch, smart apparel for visually impaired users, a sensor-driven dustbin, a semi-automated azo-dye reaction vessel, an app-based caretaker service for the elderly, intelligent protective clothing for firefighters, and an online open market for farmers.</p>
+    <p>One of the projects went on to become a successful start-up: <a href="https://www.ecoviaglobal.com/"><b>Ecovia Global</b></a>, which turns cotton garment waste into compostable packaging sold commercially. <a href="https://textilefocus.com/idea-innovation-fair-held-butex/">Report of the fair in <i>Textile Focus</i></a>.</p>
 
     <h3>Lab development</h3>
-    <div class="grid-2">
-      <div>
-        <p>I led the specification and tender for the first dedicated Textile Engineering Management lab at BUTEX: a 15-workstation computer lab for business analytics and CAD, a small sewing and product-development line (lockstitch, chain-stitch, overlock and flatlock machines), a 3D printer, and a reference library on industrial engineering, ERP and information systems for apparel. The Project Development Lab course and the Business Analytics Lab were designed to run in this space, with Tableau and spreadsheet analytics as the core tools.</p>
-        <div class="placeholder">Year the lab opened, its official name, budget approval, and whether you also prepared the HEQEP Technology Transfer Office proposal (your CV lists you as Deputy Sub-Project Manager for it).</div>
-      </div>
-      <div class="photo sq">The TEM lab: computer stations or the sewing line, ideally with students working.</div>
-    </div>
+    <p>I led the specification and tender for the first dedicated Textile Engineering Management lab at BUTEX: a 15-workstation computer lab for business analytics and CAD, a small sewing and product-development line (lockstitch, chain-stitch, overlock and flatlock machines), a 3D printer, and a reference library on industrial engineering, ERP and information systems for apparel. The Project Development Lab course and the Business Analytics Lab were designed to run in this space, with Tableau and spreadsheet analytics as the core tools.</p>
+    <p>The lab was built for learning by making. In the Project Development Lab, student groups developed an apparel product line from scratch across the semester and carried it through every stage a company would:</p>
+    <ul class="bul">
+      <li>the product concept and design;</li>
+      <li>a product positioning plan;</li>
+      <li>a target market plan;</li>
+      <li>costing;</li>
+      <li>a business plan;</li>
+      <li>a sustainability statement for the product line.</li>
+    </ul>
+    <p>Taking one product line through all of these stages, rather than treating design, marketing, costing and sustainability as separate courses, is what the lab was for.</p>
 
     <h3>Mentorship and supervision</h3>
     <ul class="plain">
@@ -338,143 +574,22 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <li><b>MBA projects</b> — supervised MBA (6th batch) projects at BUTEX, including a case study on improvement management of the sewing section targeting efficiency, overall labour effectiveness and overall equipment effectiveness together, plus literature-review projects for several students in the same cohort.</li>
       <li><b>Internship and project coordination</b> — coordinated internship and project-group allocation and the supervisor list for the 43rd batch, and served on examiner panels.</li>
     </ul>
-    <div class="placeholder">Number of students supervised, and one or two named mentees (with permission) who went on to notable positions or graduate study. Student names from your files are deliberately left out.</div>
 
     <h3>Pedagogy and training</h3>
     <ul class="plain">
-      <li><b>Pedagogy &amp; Assessment for TVET</b> — trained at the Institute of Technical Education (ITE), Singapore, under the Skills for Employment Investment Program (SEIP).</li>
-      <li><b>Certified trainer and assessor</b> — SEIP, Ministry of Finance, Government of Bangladesh, implemented by BTMA; served as external assessor for SEIP training batches.</li>
+      <li><b>Pedagogy &amp; Assessment for TVET</b> — trained at the Institute of Technical Education (ITE), Singapore, under the Skills for Employment Investment Program (SEIP), which is where I learned to write a lesson plan backwards from what the learner must be able to do.</li>
       <li><b>Pedagogy workshops</b> — designed and delivered a "Pedagogy/Teaching Methodology for TVET Professionals" workshop covering lesson planning, Gagné's nine events, Bloom's taxonomy, questioning and feedback, and assessment for learning; ran career-planning workshops for textile students.</li>
       <li><b>Faculty training</b> — participated in GIZ faculty training on Sustainable Chemicals and Environmental Management in the textile sector.</li>
       <li><b>Teaching in the US</b> — taught computational skills to high-school students, including Pareto analysis in Excel.</li>
+      <li><b>Industry training</b> — certified SEIP trainer and assessor; the factory-floor and skills-batch teaching is described under <a href="#apparel" data-tab="apparel">textile and apparel engineering and management</a>.</li>
     </ul>
-    <div class="placeholder">Any teaching assistantship or guest lectures at Stony Brook, and the year of the ITE Singapore training.</div>
-  </section>
-
-  <!-- ===================== 3. RESEARCH ===================== -->
-  <section class="tab" id="tab-research" aria-labelledby="h-research">
-    <header class="tab-head">
-      <p class="eyebrow">Research &amp; publications</p>
-      <h1 id="h-research">Waste as a compositional system.</h1>
-    </header>
-    <p class="lede">Two research lines, one question: how do you measure material waste well enough that policy can act on it? One line is municipal solid waste in New York State; the other is textile waste in Bangladesh's apparel supply chain.</p>
-
-    <h3>Dissertation</h3>
-    <div class="feature">
-      <div>
-        <p><b>Measuring and Comparing Municipal Solid Waste Systems in the United States: Multivariate Evidence for Policy Design and Evaluation</b></p>
-        <p>Waste characterization data are compositions: percentages that sum to one hundred and cannot be compared one material at a time without distortion. The dissertation builds a compositional-data framework (isometric log-ratio transformation, Aitchison distance, hierarchical clustering) that treats a jurisdiction's waste stream as a single object, so that counties, seasons and program designs can be compared as whole systems. It is validated on New York State sort data collected 2019–2025.</p>
-        <div class="placeholder">Committee members, and one sentence on the policy result you most want a reader to remember.</div>
-      </div>
-      <div class="photo sq">A figure from the dissertation: a dendrogram or heatmap of jurisdictions, or a photo from a waste sort.</div>
-    </div>
-
-    <h3>Current research: NYS solid waste characterization</h3>
-    <p>At the <a href="https://wastedata.info">Waste Data and Analysis Center</a> I design and run large-scale MSW characterization studies across New York State, from physical waste sorting and field data collection through compositional analysis and technical reporting. The program is funded by the New York State Environmental Protection Fund and runs in two phases, 2019–2024 and 2024–2029, sampling municipal solid waste and recyclables at sites across the state. I lead the technical reports for individual jurisdictions and the Task 4 report on recycling's role in a circular economy.</p>
-
-    <h3>Productivity and occupational safety in garment factories (NIPOSH)</h3>
-    <p>As Research Assistant on the Network to Integrate Productivity and Occupational Safety and Health improvements, I worked across a network of twenty-five Bangladeshi garment factories built with Ahsanullah University of Science and Technology, the University of Southern Denmark and the Bangladesh Garment Manufacturers and Exporters Association. NIPOSH extended the earlier POSH project led by Professor Peter Hasle, and tested a proposition the industry tends to resist: that productivity and worker safety improve together rather than at each other's expense.</p>
-    <p>My work covered scientific writing, training material and documentation, assessment of factory performance, data analysis and quarterly reporting to the project leadership and BGMEA, and concept development for publications out of the project. The training itself combined work study — with occupational health and safety built into the analysis of work method and workstation alignment rather than added afterwards — with production line balancing taught through spreadsheet simulation, so that factory staff could locate their own bottlenecks.</p>
-    <p>The results were mixed and reported as such. At the second quarterly report the network's mean efficiency gain was three percent: four factories had gained more than ten percent and seven more than five, while seven had gone backwards and four had stopped reporting. The delta variant and the shutdowns from July 2021 pushed most of the network online, and the online meetings proved markedly less effective than meeting face to face.</p>
-
-    <h3>Peer-reviewed publications</h3>
-    <div class="pub"><div class="yr">2026</div><div><div class="t">Municipal solid waste composition in a multivariate context: A case study using New York State 2023 sort data</div><div class="m">Akter, M. M. K., Tonjes, D. J., Firmansyah, F., Wang, Y., Thyberg, K. L., &amp; Hewitt, E. — <i>under review</i></div><div class="note">First author</div></div></div>
-    <div class="pub"><div class="yr">2025</div><div><div class="t">Material circularity of pre-consumer textile solid waste: Learning from Bangladesh</div><div class="m">Akter, M. M. K., Haq, U. N., Azad, A. K., et al. — <i>PLOS Sustainability &amp; Transformation</i>, 4(4): e0000168. <a href="https://doi.org/10.1371/journal.pstr.0000168">doi:10.1371/journal.pstr.0000168</a></div><div class="note">First author</div></div></div>
-    <div class="pub"><div class="yr">2025</div><div><div class="t">Textile solid waste end-market in the circular economy: The Mirpur cluster in Bangladesh</div><div class="m">Azad, A. K., Haq, U. N., Akter, M. M. K., &amp; Uddin, M. A. — <i>Journal of Advanced Manufacturing and Processing</i></div></div></div>
-    <div class="pub"><div class="yr">2023</div><div><div class="t">Sustainable apparel: a perspective from Bangladesh's young consumers</div><div class="m">Su, J., Iqbal, M. A., Haque, F., &amp; Akter, M. M. K. — <i>Social Responsibility Journal</i>. <a href="https://doi.org/10.1108/SRJ-01-2022-0035">doi:10.1108/SRJ-01-2022-0035</a></div><div class="note">Collaboration with researchers at UNC Greensboro · survey of 400+ young consumers, data collection designed and run in Bangladesh</div></div></div>
-    <div class="pub"><div class="yr">2022</div><div><div class="t">Textile-apparel manufacturing and material waste management in the circular economy: A conceptual model to achieve sustainable development goal (SDG) 12 for Bangladesh</div><div class="m">Akter, M. M. K., Haq, U. N., Rahman, M. M., &amp; Shiyak, A. U. — <i>Cleaner Environmental Systems</i></div><div class="note">First author · material stream mapping across apparel factories · covered by <i>Textile Today</i> as <a href="https://www.textiletoday.com.bd/0-70-lost-every-piece-apparel-export">&ldquo;$0.70 is lost for every piece of apparel export&rdquo;</a>, February 2022</div></div></div>
-    <div class="placeholder">Add DOIs for the 2022, 2025 (JAMP) and any other papers, and confirm the author list of the 2022 paper (your CV spells one co-author "Huq"/"Haq" inconsistently).</div>
-
-    <h3>Book chapters</h3>
-    <div class="pub"><div class="yr">2024</div><div><div class="t">Sustainable development and circular economy</div><div class="m">Akter, M. M. K., Haq, U. N., &amp; Uddin, M. A. — in <i>Waste Management in the Circular Economy</i></div></div></div>
-    <div class="pub"><div class="yr">2024</div><div><div class="t">Recycling practices of pre-consumer waste from textile industry</div><div class="m">Azad, A. K., Haq, U. N., Akter, M. M. K., &amp; Uddin, M. A. — in <i>Sustainable Manufacturing Practices in Textiles and Fashion</i></div></div></div>
-    <div class="placeholder">Publisher and editors for both chapters.</div>
-
-    <h3>Government technical reports</h3>
-    <div class="pub"><div class="yr">2025</div><div><div class="t">Recycling and the Circular Economy — NYSDEC Task 4 Report</div><div class="m">Akter, M. M. K., Tonjes, D. J., Wang, Y., Firmansyah, F., Thyberg, K., &amp; Hewitt, E. — Waste Data and Analysis Center, Stony Brook University; commissioned by NYSDEC</div><div class="note">Lead author</div></div></div>
-    <div class="pub"><div class="yr">2023–24</div><div><div class="t">MSW Waste Characterization Reports: Madison County and Development Authority of the North Country (DANC)</div><div class="m">Akter, M. M. K., Firmansyah, F., Thyberg, K., &amp; Hewitt, E. — Waste Data and Analysis Center; commissioned by NYSDEC</div><div class="note">Lead author, Task 1 deliverables</div></div></div>
-
-    <h3>Conference presentations</h3>
-    <div class="table-wrap"><table>
-      <thead><tr><th>When</th><th>Title</th><th>Venue</th></tr></thead>
-      <tbody>
-        <tr><td class="code">May 2026</td><td>Measurement and comparison of municipal solid waste jurisdictions with a multivariate approach</td><td>Federation of NY Solid Waste Management Associations, Lake George, NY</td></tr>
-        <tr><td class="code">May 2026</td><td>Multivariate analysis of waste composition data: how does it help policy design?</td><td>PhD Workshop in Climate &amp; Energy Decision Making, Carnegie Mellon University, Pittsburgh</td></tr>
-        <tr><td class="code">Jun 2024</td><td>Circular economy in a complex production supply chain: case from the textile industry</td><td>A&amp;WMA Annual Conference, Calgary</td></tr>
-        <tr><td class="code">Apr 2024</td><td>Material circularity of pre-consumer textile solid waste</td><td>REMADE Circular Economy Tech Summit, Washington DC</td></tr>
-        <tr><td class="code">Feb 2024</td><td>Textile solid waste recycling: a circular economy approach</td><td>Global Waste Management Symposium, California</td></tr>
-        <tr><td class="code">Jun 2023</td><td>Textile solid waste recycling: a circular economy approach</td><td>A&amp;WMA Annual Conference, Orlando</td></tr>
-        <tr><td class="code">2021</td><td>Bangladeshi young consumers and sustainable apparel</td><td>ITAA Annual Conference</td></tr>
-        <tr><td class="code">2013</td><td>Development of denim: how the fashion world looks into it</td><td>ICMERE 2013, Chittagong</td></tr>
-      </tbody>
-    </table></div>
-
-    <h3>Early publications (Bangladesh)</h3>
-    <div class="pub"><div class="yr">2015</div><div><div class="t">Analysis of the factors affecting the lead time for export of readymade apparels from Bangladesh; proposal for strategic reduction of lead time</div><div class="m">Kader, S., &amp; Akter, M. M. K. — <i>European Scientific Journal</i>, 10(33)</div></div></div>
-    <div class="pub"><div class="yr">2015</div><div><div class="t">Development of different denim effect on knitted fabric and comparative analysis on the basis of physical and dimensional properties</div><div class="m">Didar, S. A., Patwary, S. U., Kader, S., Akter, M. M. K., &amp; Ahmed, T. — <i>Research Journal of Engineering Sciences</i>, 4(4), 9–15</div></div></div>
-
-    <h3>Methods and tools</h3>
-    <div class="grid-3">
-      <div class="card"><h4>Waste characterization</h4><p>Physical waste sorting and field sampling design; MSW compositional analysis; waste fraction quantification and validation; material stream mapping; landfill and diversion metrics.</p></div>
-      <div class="card"><h4>Quantitative</h4><p>R; multivariate statistics (hierarchical clustering, ILR transformation, Aitchison/Euclidean distance, segmentation); PCA; data visualization (heatmaps, dendrograms); survey design and analysis (n &gt; 400).</p></div>
-      <div class="card"><h4>Policy &amp; reporting</h4><p>Government technical reporting for NYSDEC; circular economy and EPR policy analysis; stakeholder presentations to county and state waste managers.</p></div>
-    </div>
-
-    <h3>Awards and funding</h3>
-    <ul class="plain">
-      <li><b>2026 EREF Scholarship</b> — Environmental Research &amp; Education Foundation</li>
-      <li><b>2026 NYSASWM Scholarship</b> — New York State Association for Solid Waste Management</li>
-      <li><b>2026 SWANA Scholarship</b> — Solid Waste Association of North America</li>
-    </ul>
-    <div class="placeholder">Confirm the exact scholarship names and amounts (these come from the WDAC site), and add any earlier awards, travel grants, or the PhD funding source.</div>
-  </section>
-
-  <!-- ===================== 4. OTHER WORK ===================== -->
-  <section class="tab" id="tab-other" aria-labelledby="h-other">
-    <header class="tab-head">
-      <p class="eyebrow">Other work of significance</p>
-      <h1 id="h-other">Editing, training, and building institutions.</h1>
-    </header>
-    <p class="lede">Work that sits outside the university but shaped how I think: a decade of trade journalism, a national skills program, and a technology-transfer proposal.</p>
-
-    <h3>Editorial work</h3>
-    <div class="feature">
-      <div>
-        <p><b>Managing Editor, <a href="https://textilefocus.com"><i>Textile Focus</i></a> (since 2016) and <a href="https://denimfocus.net"><i>Denim Focus</i></a></b></p>
-        <p>I have edited two internationally circulated textile and apparel business magazines published from Dhaka, commissioning and editing technical articles on trade, technology and innovation in the sector, and writing more than a hundred of my own. The work keeps me close to what mills and brands are actually doing, which is where most of my research questions come from.</p>
-        <p>Earlier I was part of the technical team at <i>Bangladesh Textile Today</i> (2011–2015), starting as a student research assistant.</p>
-        <p>I also conduct <i>Focus Talk</i>, a webinar series that puts manufacturers, technology suppliers and academics on one panel. The fifth episode, on automation and digitalisation in the textile industry, was <a href="https://www.dhakatribune.com/business/263671/dialogue-on-automation-and-digitalization-in">reported by the <i>Dhaka Tribune</i></a> in February 2022; <a href="https://www.youtube.com/watch?v=ibJwxhazza8">recordings</a> remain online.</p>
-        <div class="placeholder">Circulation or readership figures, the year <i>Denim Focus</i> launched, three or four of your best articles with links, and the magazine's website.</div>
-      </div>
-      <div class="photo sq">Magazine covers, or you at a trade show or interview.</div>
-    </div>
-
-    <h3>Skills development and training</h3>
-    <ul class="plain">
-      <li><b>SEIP certified trainer and assessor</b> — Skills for Employment Investment Program (Ministry of Finance, Bangladesh; implemented by BTMA). Trained in pedagogy and assessment at ITE Singapore; taught Garments CAD and merchandising batches at NITER and served as external assessor.</li>
-      <li><b>NITER SEIP coordination</b> — involved in SEIP planning, class scheduling and operational policy at NITER (2016–2020).</li>
-      <li><b>Career and pedagogy workshops</b> — designed workshops on career planning for textile graduates and on teaching methodology for TVET professionals.</li>
-    </ul>
-    <div class="placeholder">Your title in the NITER SEIP program and the number of trainees or batches.</div>
-
-    <h3>Technology transfer and institutional projects</h3>
-    <ul class="plain">
-      <li><b>HEQEP proposal: Technology Transfer Office for the textile and apparel sector</b> — developed the complete proposal as Deputy Sub-Project Manager under the Higher Education Quality Enhancement Project.</li>
-      <li><b>IP Day 2019</b> — prepared and delivered a talk on intellectual property in textiles.</li>
-      <li><b>BUTEX alumni and institutional work</b> — <span class="placeholder" style="display:inline;padding:.1rem .4rem">describe (alumni platform MOU, BUTEX Day 2021 communications?)</span></li>
-      <li><b>NITER Business Club</b> — helped found a student business club at NITER.</li>
-    </ul>
-    <div class="placeholder">Confirm the HEQEP outcome (funded? year?) and anything else you consider significant: consulting, industry advisory roles, professional memberships (A&amp;WMA, SWANA, ITAA?), peer reviewing for journals.</div>
-
-    <h3>Peer review</h3>
-    <p>I review manuscripts for the <i>International Journal of Innovation and Technology Management</i> and for <i>PLOS Sustainability &amp; Transformation</i>. Reviewing in both a management journal and a sustainability journal keeps me honest about the different standards of evidence the two literatures accept.</p>
   </section>
 
   <!-- ===================== 5. TESTIMONIALS ===================== -->
   <section class="tab" id="tab-testimonials" aria-labelledby="h-testimonials">
     <header class="tab-head">
       <p class="eyebrow">Student testimonials</p>
-      <h1 id="h-testimonials">What the students say, in their own words.</h1>
+      <h1 id="h-testimonials">What the Students Say, in Their Own Words</h1>
     </header>
     <p class="lede">In September 2026 I sent a structured feedback form to former students at BUTEX and NITER, asking what they had actually used since. Thirteen replied. Their words are reproduced below without alteration.</p>
 
@@ -559,6 +674,52 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
 
     <div class="note-strip">Names link to the respondent&rsquo;s LinkedIn profile where they supplied one; four respondents did not. Full response data for all thirteen submissions is available on request. Every respondent gave explicit written consent for their response to be used in professional application materials and on this site.</div>
   </section>
+
+
+  <!-- ===================== 7. PUBLICATIONS ===================== -->
+  <section class="tab" id="tab-publications" aria-labelledby="h-publications">
+    <header class="tab-head">
+      <p class="eyebrow">Publications</p>
+      <h1 id="h-publications">The Full Record</h1>
+    </header>
+    <p class="lede">Peer-reviewed articles, book chapters, government technical reports and conference presentations, in one list. Each of the three subject tabs cites the work relevant to it; this is everything.</p>
+    <p style="font-size:.9rem"><a href="https://scholar.google.com/citations?user=WhM4Pz0AAAAJ&amp;hl=en">Google Scholar profile</a></p>
+
+    <h3>Peer-reviewed articles</h3>
+    <div class="pub"><div class="yr">2026</div><div><div class="t">Municipal solid waste composition in a multivariate context: a case study using New York State 2023 sort data</div><div class="m">Akter, M. M. K., Tonjes, D. J., Firmansyah, F., Wang, Y., Thyberg, K. L., &amp; Hewitt, E. &mdash; <i>under review</i></div><div class="note">First author</div></div></div>
+    <div class="pub"><div class="yr">2025</div><div><div class="t">Material circularity of pre-consumer textile solid waste: learning from Bangladesh</div><div class="m">Akter, M. M. K., Haq, U. N., Azad, A. K., et al. &mdash; <i>PLOS Sustainability &amp; Transformation</i>, 4(4): e0000168. <a href="https://doi.org/10.1371/journal.pstr.0000168">doi:10.1371/journal.pstr.0000168</a></div><div class="note">First author</div></div></div>
+    <div class="pub"><div class="yr">2025</div><div><div class="t">Textile solid waste end-market in the circular economy: the Mirpur cluster in Bangladesh</div><div class="m">Azad, A. K., Haq, U. N., Akter, M. M. K., &amp; Uddin, M. A. &mdash; <i>Journal of Advanced Manufacturing and Processing</i>. <a href="https://doi.org/10.1002/amp2.70007">doi:10.1002/amp2.70007</a></div></div></div>
+    <div class="pub"><div class="yr">2023</div><div><div class="t">Sustainable apparel: a perspective from Bangladesh&rsquo;s young consumers</div><div class="m">Su, J., Iqbal, M. A., Haque, F., &amp; Akter, M. M. K. &mdash; <i>Social Responsibility Journal</i>. <a href="https://doi.org/10.1108/SRJ-01-2022-0035">doi:10.1108/SRJ-01-2022-0035</a></div><div class="note">Collaboration with researchers at UNC Greensboro &middot; survey of 400+ young consumers, data collection designed and run in Bangladesh</div></div></div>
+    <div class="pub"><div class="yr">2022</div><div><div class="t">Textile-apparel manufacturing and material waste management in the circular economy: a conceptual model to achieve sustainable development goal (SDG) 12 for Bangladesh</div><div class="m">Akter, M. M. K., Haq, U. N., Islam, M. M., &amp; Uddin, M. A. &mdash; <i>Cleaner Environmental Systems</i>, 4: 100070. <a href="https://doi.org/10.1016/j.cesys.2022.100070">doi:10.1016/j.cesys.2022.100070</a></div><div class="note">First author &middot; covered by <i>Textile Today</i> as <a href="https://www.textiletoday.com.bd/0-70-lost-every-piece-apparel-export">&ldquo;$0.70 is lost for every piece of apparel export&rdquo;</a>, February 2022</div></div></div>
+
+    <h3>Book chapters</h3>
+    <div class="pub"><div class="yr">2023</div><div><div class="t">Sustainable development and circular economy</div><div class="m">Akter, M. M. K., Haq, U. N., &amp; Uddin, M. A. &mdash; in <i>Waste Management in the Circular Economy</i>, Springer, pp. 133&ndash;152. <a href="https://doi.org/10.1007/978-3-031-42426-7_7">doi:10.1007/978-3-031-42426-7_7</a></div></div></div>
+    <div class="pub"><div class="yr">2024</div><div><div class="t">Recycling practices of pre-consumer waste generated from textile industry</div><div class="m">Azad, A. K., Haq, U. N., Akter, M. M. K., &amp; Uddin, M. A. &mdash; in <i>Sustainable Manufacturing Practices in Textiles and Fashion</i>, Springer. <a href="https://doi.org/10.1007/978-3-031-51362-6_12">doi:10.1007/978-3-031-51362-6_12</a></div></div></div>
+
+    <h3>Government technical reports</h3>
+    <div class="pub"><div class="yr">2025</div><div><div class="t">Recycling and the Circular Economy &mdash; NYSDEC Task 4 Report</div><div class="m">Akter, M. M. K., Tonjes, D. J., Wang, Y., Firmansyah, F., Thyberg, K., &amp; Hewitt, E. &mdash; Waste Data and Analysis Center, Stony Brook University; commissioned by NYSDEC</div><div class="note">Lead author</div></div></div>
+    <div class="pub"><div class="yr">2023&ndash;24</div><div><div class="t">MSW waste characterization reports: Madison County and the Development Authority of the North Country</div><div class="m">Akter, M. M. K., Firmansyah, F., Thyberg, K., &amp; Hewitt, E. &mdash; Waste Data and Analysis Center; commissioned by NYSDEC</div><div class="note">Lead author, Task 1 deliverables</div></div></div>
+
+    <h3>Conference presentations</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>When</th><th>Title</th><th>Venue</th></tr></thead>
+      <tbody>
+        <tr><td class="code">May 2026</td><td>Measurement and comparison of municipal solid waste jurisdictions with a multivariate approach</td><td>Federation of NY Solid Waste Management Associations, Lake George, NY</td></tr>
+        <tr><td class="code">May 2026</td><td>Multivariate analysis of waste composition data: how does it help policy design?</td><td>PhD Workshop in Climate &amp; Energy Decision Making, Carnegie Mellon University, Pittsburgh</td></tr>
+        <tr><td class="code">Jun 2024</td><td>Circular economy in a complex production supply chain: case from the textile industry</td><td>A&amp;WMA Annual Conference, Calgary</td></tr>
+        <tr><td class="code">Apr 2024</td><td>Material circularity of pre-consumer textile solid waste</td><td>REMADE Circular Economy Tech Summit, Washington DC</td></tr>
+        <tr><td class="code">Feb 2024</td><td>Textile solid waste recycling: a circular economy approach</td><td>Global Waste Management Symposium, California</td></tr>
+        <tr><td class="code">Jun 2023</td><td>Textile solid waste recycling: a circular economy approach</td><td>A&amp;WMA Annual Conference, Orlando</td></tr>
+        <tr><td class="code">2021</td><td>Bangladeshi young consumers and sustainable apparel</td><td>ITAA Annual Conference</td></tr>
+        <tr><td class="code">2013</td><td>Development of denim: how the fashion world looks into it</td><td>ICMERE 2013, Chittagong</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Early publications</h3>
+    <div class="pub"><div class="yr">2015</div><div><div class="t">Analysis of the factors affecting the lead time for export of readymade apparels from Bangladesh; proposal for strategic reduction of lead time</div><div class="m">Kader, S., &amp; Akter, M. M. K. &mdash; <i>European Scientific Journal</i>, 10(33)</div></div></div>
+    <div class="pub"><div class="yr">2015</div><div><div class="t">Development of different denim effect on knitted fabric and comparative analysis on the basis of physical and dimensional properties</div><div class="m">Didar, S. A., Patwary, S. U., Kader, S., Akter, M. M. K., &amp; Ahmed, T. &mdash; <i>Research Journal of Engineering Sciences</i>, 4(4), 9&ndash;15</div></div></div>
+  </section>
+
 
   <footer>
     <span>Maeen Md Khairul Akter · Stony Brook University</span>
